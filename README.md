@@ -8,3 +8,7 @@ make report.pdf
 ```
 
 Clean Up
+
+```
+make clean
+```
