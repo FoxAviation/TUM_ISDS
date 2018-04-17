@@ -4,6 +4,21 @@
 
 \usepackage{booktabs} % For formal tables
 
+\usepackage{url}		%Urls
+\usepackage{hyperref}	%Make urls clickable
+
+%For the outlining phase of this project, increase the number of nested itemize environments
+\usepackage{enumitem}
+\setlistdepth{20}
+\renewlist{itemize}{itemize}{20}
+
+% initially, use dots for all levels
+\setlist[itemize]{label=$\cdot$}
+
+% customize the first 3 levels
+\setlist[itemize,1]{label=\textbullet}
+\setlist[itemize,2]{label=--}
+\setlist[itemize,3]{label=*}
 
 % Copyright
 \setcopyright{none}

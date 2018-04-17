@@ -1,28 +1,75 @@
 \subsection{Chef}
-
+	Found on \url{https://docs.chef.io/chef_overview.html}
 	\begin{itemize}
 		\item Components
-		\begin{itemize}
-			\item Chef DK
+			\begin{itemize}
+				\item Chef DK (Chef Development Kit)
+					\begin{itemize}
+						\item Computers running Chef DK are called Workstations
+						\item Creation of cookbooks
+						\item Test of cookbooks with Test Kitchen
+							\begin{itemize}
+								\item Describe Test Kitchen here
+							\end{itemize}
+						\item Components of workstations
+							\begin{itemize}
+								\item Knife
+									\begin{itemize}
+										\item Interface between local chef-repo and Chef server
+									\end{itemize}
+								\item The chef-repo
+									\begin{itemize}
+										\item Cookbook storage
+										\item "The chef-repo should be synchronized with a version control system (such as git), and then managed as if it were source code" \url{https://docs.chef.io/workstation.html#configure-ruby-environment}
+									\end{itemize}
+								\item knife.rb
+									\begin{itemize}
+										\item File to specify configuration details for knife
+									\end{itemize}
+							\end{itemize}
+					\end{itemize}
+				\item Chef Server
+					\begin{itemize}
+						\item Hub for configuration data (cookbooks)
+						\item Pull configuration: Nodes pull cookbooks from server
+					\end{itemize}
+				\item Node
+					\begin{itemize}
+						\item Client software must be installed on each node
+						
+					\end{itemize}
+				\item Chef Supermarket
 				\begin{itemize}
-					\item "Location where users interact with chef"
-					\item Creation of cookbooks
-					\item Test of cookbooks with Test Kitchen
-						\begin{itemize}
-							\item Describe Test Kitchen here
-						\end{itemize}
+					\item Sharing and management of community cookbooks
 				\end{itemize}
-			\item Chef Server
-				\begin{itemize}
-					\item Hub for configuration data (cookbooks)
-					\item Pull configuration: Nodes pull cookbooks from server
-				\end{itemize}
-			\item Node
-				\begin{itemize}
-					\item Client software must be installed on each node
-					
-				\end{itemize}
-		\end{itemize}
+			\end{itemize}
+		\item Cookbooks contain
+			\begin{itemize}
+				\item attributes
+				\item cookbook\_file
+				\item libraries: Ruby code can be included in a cookbook
+				\item metadata: Stored in \textit{metadata.rb}. Helps the server deploy the cookbooks to the nodes correctly
+				\item recipes
+					\begin{itemize}
+						\item Authored in Ruby
+						\item Collection of ressources
+						\item Must define everything that is needed to configure the node
+					\end{itemize}
+				\item ressources
+					\begin{itemize}
+						\item Describes the desired state for a configuration item
+						\item Describes the steps to achieve the desired state
+						\item Contains ressource type
+						\item Grouped into recipes
+					\end{itemize}
+				\item templates
+					\begin{itemize}
+						\item Used to dynamically generate static text files
+						\item May contain Ruby
+						\item Intended to manage configuration files
+					\end{itemize}
+				\item tests
+			\end{itemize}
 	\end{itemize}
 
 \subsection{Puppet}
