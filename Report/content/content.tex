@@ -20,7 +20,7 @@
 								\item The chef-repo
 									\begin{itemize}
 										\item Cookbook storage
-										\item "The chef-repo should be synchronized with a version control system (such as git), and then managed as if it were source code" \url{https://docs.chef.io/workstation.html#configure-ruby-environment}
+										\item "The chef-repo should be synchronized with a version control system (such as git), and then managed as if it were source code"\\ {\tiny \url{https://docs.chef.io/workstation.html#configure-ruby-environment}}
 									\end{itemize}
 								\item knife.rb
 									\begin{itemize}
@@ -32,11 +32,65 @@
 					\begin{itemize}
 						\item Hub for configuration data (cookbooks)
 						\item Pull configuration: Nodes pull cookbooks from server
+						\item Features
+							\begin{itemize}
+								\item Search any type of data that is indexed by the Chef server (features wildcards, etc.)
+								\item Management of
+								\begin{itemize}
+									\item Nodes
+									\item Cookbooks and recipes
+									\item Roles
+									\item Stores of JSON data (data bags), including encrypted data
+									\item Environments
+									\item User accounts and user data
+								\end{itemize}
+								\item data bag
+									\begin{itemize}
+										\item Global variable that is stored as JSON data
+										\item Accessible from Chef server
+										\item Indexed for searching
+									\end{itemize}
+								\item Policy
+									 \begin{itemize}
+									 	\item Role
+										 	\begin{itemize}
+										 		\item Defines patterns and processes that exists across nodes
+										 		\item Chef client merges attributes and run-lists with assigned roles
+										 	\end{itemize}
+									 \end{itemize}
+								\item Environment
+									\begin{itemize}
+										\item Maps the real-life workflow to the configuration items of Chef
+										\item Can be associated with one or more cookbook versions
+									\end{itemize}
+								\item Run-list
+									\begin{itemize}
+										\item Ordered list of roles and/or recipes
+										\item Items run in the order defined in the run-list
+										\item Can be node-specific
+										\item Stored as part of the node object on the Chef server
+										\item Maintenance with knife or Chef Automate
+									\end{itemize}
+							\end{itemize}
 					\end{itemize}
-				\item Node
+				\item Chef client
 					\begin{itemize}
-						\item Client software must be installed on each node
-						
+						\item Must be installed on each node
+						\item Performs
+							\begin{itemize}
+								\item Registration and authentication of the node with the chef server
+								\item Building the node object
+								\item Synchronization of cookbooks
+								\item Compilation of the resource collection
+								\item Configuration of the node
+								\item Exception and notification handling
+							\end{itemize}
+					\end{itemize}
+				\item Ohai
+					\begin{itemize}
+						\item Collects system configuration data for use within cookbooks
+						\item Includes many built-in plugins to detect state
+						\item Attributes contain: OS, Network, Memory, Disk, CPU, Kernel, host names, virtualization, etc.
 					\end{itemize}
 				\item Chef Supermarket
 				\begin{itemize}
