@@ -4,5 +4,9 @@
 
 ## References
 ### General
+
 ### Puppet
+
 ### Chef
+[Chef overview](https://docs.chef.io/chef_overview.html)
+[Chef tutorials](https://learn.chef.io/#/)
