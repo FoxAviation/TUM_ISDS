@@ -1,6 +1,10 @@
 # TUM_ISDS
 ## Space for notes
-... because why not?
+
+* System architecture part for both individually or single client-server introduction
+* Define Research question (Goal: provide a factual comparison to provide an informed decision of what system to use under which circumstances?)
+
+
 
 ## References
 ### General
@@ -14,7 +18,15 @@
 
 ### Puppet
 
+Next-generation Configuration Management (Kanies2006)
+
+
+
+
+
 ### Chef
 [Chef overview](https://docs.chef.io/chef_overview.html)
 
 [Chef tutorials](https://learn.chef.io/#/)
+
+Test-driven infrastructure with Chef
