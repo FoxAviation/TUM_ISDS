@@ -10,18 +10,21 @@
 
 
 # TODO #
+- [ ] Zeitplan festlegen
+- [ ] Weitere Kameras notwendig?
 - [ ] Tontechnik ausleihen (Tonstudio)
-- [ ] Lichttechnik ausprobieren & organisieren
+- [ ] Lichttechnik organisieren & ausprobieren
 - [ ] Drehorte festlegen (Wie sind die Rahmenbedingungen?)
-- [ ]
-- [ ] Kameras vorbereiten
+- [ ] Welche Animation, etc. notwendig?
+- [ ] Kameras & Zubehör durchklingeln
 
 # Equipment #
 ## Kameras ##
- Camera  |      Use
+ Camera  | Use
 ---------|--------------------------
 Sony EOS | Static scenes, Interviews
-  GoPro  | Landscape, action
+GoPro    | Landscape, action
+
 
 ## Tontechnik ##
 * Richtmikro
@@ -32,3 +35,6 @@ Sony EOS | Static scenes, Interviews
 ## Licht ##
 * min. 2x Tageslicht-Leuchten
 * 1x warm
+
+# Animationen #
+_TODO_
