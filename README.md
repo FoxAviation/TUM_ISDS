@@ -18,7 +18,7 @@
 
 ### Puppet
 
-Next-generation Configuration Management (Kanies2006)
+[Next-generation Configuration Management](https://www.usenix.org/system/files/login/articles/920/kanies_0.pdf)
 
 
 
