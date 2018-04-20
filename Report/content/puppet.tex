@@ -1,0 +1,17 @@
+\subsection{Puppet}
+	\begin{itemize}
+		\item Uses a master-slave architecture
+		\item Uses pull config
+		\item Ressource management:
+		\begin{itemize}
+			\item Manifests describe the node configuration
+			\item Groups of ressources can be organized into classes $\Rightarrow$ i.e. config for entire application can be grouped
+			\item Modules combine manifests and data to improve code organization
+		\end{itemize}
+		\item Server node connection via SSL works as follows:
+		\begin{enumerate}
+			\item Node sends normalized data to the Puppet master
+			\item Server uses this data to compile a catalog, that specifies how the node should be configured
+			\item The node reports back the successful config to the master (Visible on the Puppet Dashboard)
+		\end{enumerate}
+	\end{itemize}
