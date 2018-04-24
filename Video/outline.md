@@ -22,28 +22,25 @@
 - [ ] Zeitplan festlegen
 - [ ] Interview-Partner festlegen
 - [ ] Fragen für Interview
-- [ ] Weitere Kameras notwendig?
+- [X] Weitere Kameras notwendig?
 - [ ] Tontechnik ausleihen (Tonstudio)
 - [ ] Lichttechnik organisieren & ausprobieren
 - [ ] Drehorte festlegen (Wie sind die Rahmenbedingungen?)
 - [ ] Welche Animation, etc. notwendig?
-- [ ] Sprecheraufnahmen im Studio möglich?!
+- [X] Sprecheraufnahmen im Studio möglich?!
 - [ ] Kameras & Zubehör durchklingeln
 
 # Equipment #
 ## Kameras ##
  Camera  | Use
 ---------|--------------------------
-Sony EOS | Static scenes, Interviews
-GoPro    | Landscape, action
+Legria HF G40 | Primary cam
+Sony EOS | Static scenes, Interview: Secondary cam
+GoPro    | Landscape, action, ...
 
 
 ## Tontechnik ##
-* Richtmikro
-* Galgen
-* Atmo OKM
-* 2 ch recorder
-**UPDATE: Ist organisiert**
+Tontechnik steht voraussichtlich uneingeschränkt zur Verfügung und kann jederzeit abgeholt werden. Das Setup besteht aus zwei Richtmikrofonen, die an an einem Galgen befestigt werden und so ideal für Interview-Situation genutzt werden können. Außerdem habe ich ein speziell für die Aufnahme von Umgebungsgeräuschen entwickeltes Mikrofon, falls wir mal keine Hintergrundmusik haben. Die Aufnahme erfolgt mit einem transportablen Aufnahmegerät, dass die beiden Mikrofone in zwei seperaten Tonspuren aufnimmt.
 
 ## Licht ##
 * min. 2x Tageslicht-Leuchten

@@ -1,28 +1,29 @@
 \section{Introduction}
 
-The system administrators task of configuring, monitoring and maintaining modern computer systems requires extensive knowledge of setup and troubleshooting procedures as well as in-depth technical knowledge on the systems components (databases, networks, applications, load balancers) and their respective interactions \cite{Barrett:2004:FSC:1031607.1031672}. While virtualization decouples compute resources from the physical hosts the system operates, administering complex systems remains a daunting task. To tackle the challenge of administrating heterogeneous IT infrastructures with systems distributed across multiple servers and networks, automation tooling has been developed to alleviate issues associated with managing such infrastructures \cite{Hintsch2016ARO}. \\ This section introduces the concept of configuration management tools and typical problems solved through such software.
+	The system administrators task of configuring, monitoring and maintaining modern computer systems requires extensive knowledge of setup and troubleshooting procedures as well as in-depth technical knowledge on the systems components (databases, networks, applications, load balancers) and their respective interactions \cite{Barrett:2004:FSC:1031607.1031672}. While virtualization decouples compute resources from the physical hosts the system operates, administering complex systems remains a daunting task. To tackle the challenge of administrating heterogeneous IT infrastructures with systems distributed across multiple servers and networks, automation tooling has been developed to alleviate issues associated with managing such infrastructures \cite{Hintsch2016ARO}. \\ This section introduces the concept of configuration management tools and typical problems solved through such software.
 
 \subsection{Configuration Management (CM)}
 
 \subsection{Infrastructure as Code}
 
-\begin{itemize}
-\item Paradigm shift due to the complexity of modern web services
-\item Enabling technologies: VCS, web frameworks
-\begin{itemize}
-\item \textit{Repeatability}
-\item \textit{Automation}
-\item \textit{Agility}
-\item \textit{Scalability}
-\item \textit{Reassurance}
-\item \textit{Disaster Recovery}
-\end{itemize}
-\end{itemize}
+	\begin{itemize}
+		\item Paradigm shift due to the complexity of modern web services
+		\item Enabling technologies: VCS, web frameworks
+			\begin{itemize}
+			\item \textit{Repeatability}
+			\item \textit{Automation}
+			\item \textit{Agility}
+			\item \textit{Scalability}
+			\item \textit{Reassurance}
+			\item \textit{Disaster Recovery}
+			\end{itemize}
+	\end{itemize}
 
 \subsection{Why configuration management}
 
 	\begin{itemize}
 		\item Deploy many applications on many machines (a.k.a. nodes)
+		\item Manage nodes with different OS
 		\item Update an application on all nodes simultaneously
 		\item Simplify rollbacks
 		\item Keep environments consistent among multiple entities (i.e. dev/testing/production)
@@ -30,10 +31,11 @@ The system administrators task of configuring, monitoring and maintaining modern
 	\end{itemize}
 	
 \subsection{Properties of system configuration tools}
-\begin{itemize}
-\item Input Specification
-\item Abstraction Mechanisms
-\item Modularization Mechanisms
-\item Relation Modeling
-\end{itemize}
-\item{Input Specification}
+
+	\begin{itemize}
+	\item Input Specification
+	\item Abstraction Mechanisms
+	\item Modularization Mechanisms
+	\item Relation Modeling
+	\item Input Specification
+	\end{itemize}
