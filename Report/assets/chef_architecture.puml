@@ -1,0 +1,70 @@
+@startuml
+left to right direction
+skinparam padding 5
+
+database couchdb [
+CouchDB
+--
+]
+
+database datastore [
+Data Store
+--
+]
+
+database solr [
+Solr
+--
+]
+
+cloud "Chef Supermarket" as supermarket
+
+queue "RabbitMQ" as queue
+
+node "Chef Server" as chefserver {
+    artifact "Cookbooks\nSettings\nConfiguration" as res
+    interface "REST API" as rest
+    interface "Web UI" as ui
+}
+
+node "Solr indexer" as indexer
+
+couchdb -- chefserver
+chefserver -- solr
+chefserver -right-> queue
+res <..> supermarket
+queue --> indexer
+indexer --> solr
+chefserver -- datastore
+
+
+frame "Chef Nodes" as managed {
+  node client1 [
+  Node
+  ==
+  ]
+  node client2 [
+  Node
+  ==
+  ]
+  node client3 [
+  Node
+  ==
+  ]
+}
+
+chefserver --> client1
+chefserver --> client2
+chefserver --> client3
+
+
+workstation --> ui
+
+node "Chef Workstation" as workstation {
+  component "Knife" as knife
+}
+
+knife --> rest
+
+
+@enduml

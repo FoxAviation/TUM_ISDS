@@ -1,9 +1,9 @@
 \documentclass[sigconf]{acmart}
 \renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
 \settopmatter{printacmref=false} % don't print conference infos
+\pagestyle{plain} % remove running headers
 
 \usepackage{booktabs} % For formal tables
-
 \usepackage{url}		%Urls
 \usepackage{hyperref}	%Make urls clickable
 
@@ -20,41 +20,15 @@
 \setlist[itemize,2]{label=--}
 \setlist[itemize,3]{label=*}
 
-% Copyright
+% copyright
 \setcopyright{none}
-%\setcopyright{acmcopyright}
-%\setcopyright{acmlicensed}
-%\setcopyright{rightsretained}
-%\setcopyright{usgov}
-%\setcopyright{usgovmixed}
-%\setcopyright{cagov}
-%\setcopyright{cagovmixed}
-
-%\acmYear{2018}
-%\copyrightyear{2018}
-
-
-%\acmArticle{4}
-%\acmPrice{15.00}
-
-% These commands are optional
-%\acmBooktitle{Transactions of the ACM Woodstock conference}
-%\editor{Jennifer B. Sartor}
-%\editor{Theo D'Hondt}
-%\editor{Wolfgang De Meuter}
-
 
 \begin{document}
-\title{Configuration Management: Chef \& Puppet}
-%\titlenote{Produces the permission block, and
-%  copyright information}
-\subtitle{Internet-scale Distributed Systems Seminar Report}
-%\subtitlenote{The full version of the author's guide is available as
-%  \texttt{acmart.pdf} document}
 
+\title{Configuration Management: Chef \& Puppet}
+\subtitle{Internet-scale Distributed Systems Seminar Report}
 
 \author{Felix Wieser}
-%\authornote{Dr.~Trovato insisted his name be first.}
 \affiliation{%
   \institution{TU Munich}
   \city{Munich}
@@ -63,7 +37,6 @@
 \email{felix.wieser@tum.de}
 
 \author{Daniel Federschmidt}
-%\authornote{The secretary disavows any knowledge of this author's actions.}
 \affiliation{%
   \institution{TU Munich}
   \city{Munich}
@@ -71,24 +44,22 @@
 }
 \email{daniel.federschmidt@tum.de}
 
-
 % The default list of authors is too long for headers.
 \renewcommand{\shortauthors}{F. Wieser et al.}
 
 
 \begin{abstract}
-
-A good report has an abstract!
-
+\input{content/abstract}
 \end{abstract}
-
-\keywords{Configuration Management, DevOps}
 
 \maketitle
 
 \input{content/introduction}
 \input{content/system_architecture}
-\input{content/content}
+\input{content/chef}
+\input{content/puppet}
+\input{content/evaluation}
+\input{content/conclusions}
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{references}
