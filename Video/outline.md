@@ -14,7 +14,7 @@
 3. How does configuration management work?
     * Features according to report
     * Many animations and pictures will be needed!
-    * Shoot part of the explanation at the LRZ (nice background)?
+    * Shoot part of the explanation at the LRZ (nice background) ?
 4. Conclusion and transition to presentation
 
 
@@ -43,6 +43,7 @@ GoPro    | Landscape, action
 * Galgen
 * Atmo OKM
 * 2 ch recorder
+**UPDATE: Ist organisiert**
 
 ## Licht ##
 * min. 2x Tageslicht-Leuchten

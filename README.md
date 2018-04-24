@@ -20,7 +20,9 @@
 
 Next-generation Configuration Management (Kanies2006)
 
+[Puppet Emulator](https://puppet.com/products/emulator)
 
+[Puppet learning VM](https://puppet.com/download-learning-vm)
 
 
 
