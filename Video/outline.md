@@ -92,6 +92,8 @@
         * <TODO>
     * Sound
         * Both actors, stereo
+
+# General notes (do not pay too much attention to this) #
 n. What is the problem? Why configuration mangement?
     * Situation: Not just a single computer, but entire set of computers to initialize, configure, update, ...
     * How would the world look like without configuration management?
