@@ -1,13 +1,105 @@
 # Storyline #
-1. Opening
-2. What is the problem? Why configuration mangement?
+1. Opening scene: Failing hard
+    * Setting
+        * Daylight
+        * Office with table and laptop or stationary computer, showing a command line
+        * Actor sitting at the desk
+        * Cup of coffee on the table
+    * Camera
+        * Static: MCU: Actor and table from side view, some background
+        * CU: Person typing
+        * CU (screencast): OS showing a console
+    * Story
+        * Actor typing, thinking, obviously trying to get the computer to do something
+2. Sunset
+    * TODO
+3. Working at computer at night
+    * Setting
+        * Night-time scene
+        * EMCUe: Same setting as before...
+    * Camera
+        * Static: Actor at table, some background (dark)
+        * CU (screencast): OS showing a console
+    * Story
+        * Actor typing, frustrated and tired, still tries to get the computer to do something
+        * Drinking a lot of coffee
+        * CU (screencast): OS showing a console
+4. Title screen
+    * Setting
+        * Console on computer
+    * Camera
+        * CU (screencast): OS showing a console
+    * Story
+        * Typing: "Configuration management" (Enter)
+        * Console output: "A movie by: Daniel Federschmidt and Felix Wieser
+    * Sound
+        * Typing sound (live recording of typing?), mono
+5. Introduction: How is computer configuration done in computing centers?
+    * Setting
+        * Same setting as scene 1
+    * Camera
+        * Static: MCU: Two actors and table front view, some background
+        * Static: MCU: Two actors and table; side view
+    * Story
+        * Dialog: Discussion
+            * Installation of software on a computer is a tedious process
+            * Imagine having not just one but many computers
+            * How do computing centers maintain thousands of computers?
+    * Sound
+        * Voices of the two actors, stereo
+6. Introduction to the LRZ
+    * Setting
+        * Daylight
+        * Outdoor in front of the LRZ
+        * One actor standing in front of the camera
+    * Camera
+        * MCU: Frontal to actor
+        * MCU: Perspective
+    * Story
+        * Actor informs the viewer, that he is in front of the LRZ
+        * "Take a look inside to find out how they manage thousands of computers"
+        * Actor goes to and opens the entrance of the LRZ, disappears inside
+    * Sound
+        * Actor voice, mono
+7. Sweep though the computer hall
+    * Setting
+        * Inside the computing halMCU of the LRZ
+    * Camera
+        * Tracking shot though the corridors of the computers
+        * Tracking shot cables
+        * Static: Blinking LEDs
+        * Static: Low: Walking
+    * Story
+        * Actor walking though corridor, trying to figure out how the computer infrastructur work
+    * Sound
+        * Music or ambient sound (Record anyways)
+8. Transition to interview
+    * Setting
+        * Inside the LRZ, maybe on the bridge or in the colored corridor
+        * One actor frontal to the camera
+    * Camera
+        * Static: MCU and frontal to actor
+    * Story
+        * <TODO: Transition to interview>
+9. Interview LRZ (**Name of interview partner**)
+    * Setting
+        * Room
+        * Two interview partners sitting on one side of a table
+    * Camera
+        * MCU: Frontal, both interview partners in view
+        * CU: Interview partner
+    * Story
+        * <TODO>
+    * Sound
+        * Both actors, stereo
+n. What is the problem? Why configuration mangement?
     * Situation: Not just a single computer, but entire set of computers to initialize, configure, update, ...
     * How would the world look like without configuration management?
         * Writing scripts
     * Motivation according to intruduction in paper
     * Pictures
         * Sweep though LRZ [~1 min material]
-        * Somebody typing on a computer (close-up: keyboard, entire table with actor and computer [15 sec material])
+        * Somebody typing on a computer (CU: keyboard, entire table with actor and computer [15 sec material])
         * On-screen footage: Writing a traditional script
         * Matrix-like numbers... (cmatrix screen recording) [5 sec material]
         * Interview outtake for motivation [~ 3 min material]
@@ -40,7 +132,7 @@ GoPro    | Landscape, action, ...
 
 
 ## Tontechnik ##
-Tontechnik steht voraussichtlich uneingeschränkt zur Verfügung und kann jederzeit abgeholt werden. Das Setup besteht aus zwei Richtmikrofonen, die an an einem Galgen befestigt werden und so ideal für Interview-Situation genutzt werden können. Außerdem habe ich ein speziell für die Aufnahme von Umgebungsgeräuschen entwickeltes Mikrofon, falls wir mal keine Hintergrundmusik haben. Die Aufnahme erfolgt mit einem transportablen Aufnahmegerät, dass die beiden Mikrofone in zwei seperaten Tonspuren aufnimmt.
+Tontechnik steht voraussichtlich uneingeschränkt zur Verfügung und kann jederzeit abgeholt werden. Das Setup besteht aus zwei Richtmikrofonen, die an an einem Galgen befestigt werden und so ideal für Interview-Situation genutzt werden können. Außerdem habe ich ein speziell für die Aufnahme von Umgebungsgeräuschen entwickeltes Mikrofon, falMCU wir mal keine Hintergrundmusik haben. Die Aufnahme erfolgt mit einem transportablen Aufnahmegerät, dass die beiden Mikrofone in zwei seperaten Tonspuren aufnimmt.
 
 ## Licht ##
 * min. 2x Tageslicht-Leuchten
