@@ -131,8 +131,10 @@
     * Story
         * <TODO: Required to understanding the concepts of configuration management>
 12. What is configuration management?
+
     Alternating shots from __9.1__ and __9.2__
-    9.1. Interview LRZ (**Name of interview partner**)
+
+    1. Interview LRZ (**Name of interview partner**)
         * Setting
             * Room
             * Two interview partners sitting on one side of a table
@@ -143,7 +145,7 @@
             * <TODO: How is configuration management done in the LRZ?>
         * Sound
             * Both actors, stereo
-    9.2. Greenscreen footage
+    2. Greenscreen footage
         * Setting
             * Greenscreen
             * One actor
@@ -154,7 +156,7 @@
             * <TODO: Explanation of configuration management>
         * Sound
             * Actor, mono
-12. Outro
+13. Outro
     * Setting
         * <TODO: Indoor, interesting background
     * Camera
