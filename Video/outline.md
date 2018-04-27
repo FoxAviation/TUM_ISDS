@@ -1,5 +1,29 @@
 # Storyline #
-1. Opening scene: Failing hard
+1. Opening scene: Waking up
+    * Setting
+        * In front of a house/building
+        * Early morning
+    * Camera
+        * Perspective view on building
+    * Story
+        * Fade in from black
+        * Sound: alarm ringing
+        * Sound: Pistol shot, flash in window, alarm silent
+        * Fade out to black
+2. Opening scene: Todo-List
+    * Setting
+        * View onto a whiteboard, showing a todo-list containing only "Install mysql"
+    * Camera
+        * MCU on whiteboard
+        * Zoom-in on "Install mysql"
+    * Story
+        * Fade in from black
+        * Actor walks to whiteboard with cup of coffee and looks at the todo list
+        * Actor feels like this is going to be an easy day
+        * Fade out to black
+    * Sound
+        * Early morning music, maybe radio news
+3. Opening scene: Failing hard
     * Setting
         * Daylight
         * Office with table and laptop or stationary computer, showing a command line
@@ -10,10 +34,30 @@
         * CU: Person typing
         * CU (screencast): OS showing a console
     * Story
-        * Actor typing, thinking, obviously trying to get the computer to do something
-2. Sunset
-    * TODO
-3. Working at computer at night
+        * Actor walks to table with cup of coffee in his hand
+        * Actor sits down on chair
+        * Actor starts typing, thinking, obviously trying to get the computer to do something
+        * CU (screencast): OS showing a console
+            * Typing the command to install mysql
+            * System showing dependency errors
+4. Timelapse clock
+    * Setting
+        * Clock running
+    * Camera
+        * Frontal view on clock, timelapse
+    * Story
+        * Clock ticking though entire day
+        * Fade-out to black
+    * Sound
+        * Clock ticking
+5. 11 hours later
+    * Setting
+        * Black screen, center text "11 hours later"
+    * Story
+        * Fade-out to black
+    * Sound
+        * Distinct gong
+6. Working at computer at night
     * Setting
         * Night-time scene
         * EMCUe: Same setting as before...
@@ -22,9 +66,12 @@
         * CU (screencast): OS showing a console
     * Story
         * Actor typing, frustrated and tired, still tries to get the computer to do something
-        * Drinking a lot of coffee
+        * Trying to drink coffee, but cup is empty. Actors is angry about this
         * CU (screencast): OS showing a console
-4. Title screen
+            * Typing the command to install mysql
+            * System showing dependency errors (ideally different to scene 2)
+        * Actor standing up, walking away
+7. Title screen
     * Setting
         * Console on computer
     * Camera
@@ -34,7 +81,7 @@
         * Console output: "A movie by: Daniel Federschmidt and Felix Wieser
     * Sound
         * Typing sound (live recording of typing?), mono
-5. Introduction: How is computer configuration done in computing centers?
+8. Introduction: How is computer configuration done in computing centers?
     * Setting
         * Same setting as scene 1
     * Camera
@@ -43,11 +90,12 @@
     * Story
         * Dialog: Discussion
             * Installation of software on a computer is a tedious process
+            * Discussion: Using scripts to configure nodes
             * Imagine having not just one but many computers
             * How do computing centers maintain thousands of computers?
     * Sound
         * Voices of the two actors, stereo
-6. Introduction to the LRZ
+9. Introduction to the LRZ
     * Setting
         * Daylight
         * Outdoor in front of the LRZ
@@ -57,44 +105,76 @@
         * MCU: Perspective
     * Story
         * Actor informs the viewer, that he is in front of the LRZ
-        * "Take a look inside to find out how they manage thousands of computers"
+        * total number of clients, clients are called nodes
+        * "Take a look inside to find out how they manage all these nodes"
         * Actor goes to and opens the entrance of the LRZ, disappears inside
     * Sound
         * Actor voice, mono
-7. Sweep though the computer hall
+10. Sweep though the computer hall
     * Setting
-        * Inside the computing halMCU of the LRZ
+        * Inside the computing center of the LRZ
     * Camera
         * Tracking shot though the corridors of the computers
         * Tracking shot cables
         * Static: Blinking LEDs
         * Static: Low: Walking
     * Story
-        * Actor walking though corridor, trying to figure out how the computer infrastructur work
+        * Actor walking though corridor, trying to figure out how the computer infrastructur works
     * Sound
         * Music or ambient sound (Record anyways)
-8. Transition to interview
+11. Transition to explanatory part
     * Setting
         * Inside the LRZ, maybe on the bridge or in the colored corridor
         * One actor frontal to the camera
     * Camera
         * Static: MCU and frontal to actor
     * Story
-        * <TODO: Transition to interview>
-9. Interview LRZ (**Name of interview partner**)
+        * <TODO: Required to understanding the concepts of configuration management>
+12. What is configuration management?
+    Alternating shots from __9.1__ and __9.2__
+    9.1. Interview LRZ (**Name of interview partner**)
+        * Setting
+            * Room
+            * Two interview partners sitting on one side of a table
+        * Camera
+            * MCU: Frontal, both interview partners in view
+            * CU: Interview partner
+        * Story
+            * <TODO: How is configuration management done in the LRZ?>
+        * Sound
+            * Both actors, stereo
+    9.2. Greenscreen footage
+        * Setting
+            * Greenscreen
+            * One actor
+        * Camera
+            * MCU: Frontal
+            * CU: Frontal
+        * Story
+            * <TODO: Explanation of configuration management>
+        * Sound
+            * Actor, mono
+12. Outro
     * Setting
-        * Room
-        * Two interview partners sitting on one side of a table
+        * <TODO: Indoor, interesting background
     * Camera
-        * MCU: Frontal, both interview partners in view
-        * CU: Interview partner
+        * MCU: Frontal, both actors
     * Story
-        * <TODO>
-    * Sound
-        * Both actors, stereo
+        * Configuration management is complex, but there are tools out there to help
+        * Taking a look at Puppet and Chef in the next 20 minutes
+
+99. Credits
+    * Setting
+            * Credit roll left + outtakes right
+    * Camera
+        * -/-
+    * Story
+        * Credit roll
+        * Outtakes
+
 
 # General notes (do not pay too much attention to this) #
-n. What is the problem? Why configuration mangement?
+* What is the problem? Why configuration mangement?
     * Situation: Not just a single computer, but entire set of computers to initialize, configure, update, ...
     * How would the world look like without configuration management?
         * Writing scripts
@@ -105,11 +185,11 @@ n. What is the problem? Why configuration mangement?
         * On-screen footage: Writing a traditional script
         * Matrix-like numbers... (cmatrix screen recording) [5 sec material]
         * Interview outtake for motivation [~ 3 min material]
-3. How does configuration management work?
+* How does configuration management work?
     * Features according to report
     * Many animations and pictures will be needed!
     * Shoot part of the explanation at the LRZ (nice background) ?
-4. Conclusion and transition to presentation
+* Conclusion and transition to presentation
 
 
 # TODO #
