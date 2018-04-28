@@ -7,8 +7,9 @@
         * Perspective view on building
     * Story
         * Fade in from black
+        * Sound: Atmo: Early morning nature
         * Sound: alarm ringing
-        * Sound: Pistol shot, flash in window, alarm silent
+        * Sound: Pistol reloading, pistol shot and flash in window, alarm silent
         * Fade out to black
 2. Opening scene: Todo-List
     * Setting
@@ -39,14 +40,16 @@
         * Actor starts typing, thinking, obviously trying to get the computer to do something
         * CU (screencast): OS showing a console
             * Typing the command to install mysql
-            * System showing dependency errors
+            * System showing dependency errors, ...
+     * Sound
+        * Music (Record atmo anyways)
 4. Timelapse clock
     * Setting
         * Clock running
     * Camera
         * Frontal view on clock, timelapse
     * Story
-        * Clock ticking though entire day
+        * Clock ticking though 12 hours
         * Fade-out to black
     * Sound
         * Clock ticking
@@ -60,22 +63,25 @@
 6. Working at computer at night
     * Setting
         * Night-time scene
-        * EMCUe: Same setting as before...
+        * Else: Same setting as before...
     * Camera
         * Static: Actor at table, some background (dark)
         * CU (screencast): OS showing a console
     * Story
+        * Fade in from black
         * Actor typing, frustrated and tired, still tries to get the computer to do something
-        * Trying to drink coffee, but cup is empty. Actors is angry about this
+        * Actor attempts to drink coffee, but cup is empty. Actors frustrated/angry
         * CU (screencast): OS showing a console
             * Typing the command to install mysql
             * System showing dependency errors (ideally different to scene 2)
         * Actor standing up, walking away
+    * Sound
+        * Music (Record atmo anyways)
 7. Title screen
     * Setting
-        * Console on computer
+        * Computer console
     * Camera
-        * CU (screencast): OS showing a console
+        * CU (screencast): OS showing a console (large font!!)
     * Story
         * Typing: "Configuration management" (Enter)
         * Console output: "A movie by: Daniel Federschmidt and Felix Wieser
@@ -158,13 +164,13 @@
             * Actor, mono
 13. Outro
     * Setting
-        * <TODO: Indoor, interesting background
+        * Office
     * Camera
-        * MCU: Frontal, both actors
+        * MCU: Frontal, two actors
     * Story
         * Configuration management is complex, but there are tools out there to help
         * Taking a look at Puppet and Chef in the next 20 minutes
-
+----
 99. Credits
     * Setting
             * Credit roll left + outtakes right
@@ -221,6 +227,8 @@ Tontechnik steht voraussichtlich uneingeschränkt zur Verfügung und kann jederz
 ## Licht ##
 * min. 2x Tageslicht-Leuchten
 * 1x warm
+* Reflektor Tages-/Kunstlicht 1x1 m
+* Diffusor 1x1 m
 
 # Animationen #
 _TODO_

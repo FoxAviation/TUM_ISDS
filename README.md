@@ -1,9 +1,26 @@
-# TUM_ISDS
+ # TUM_ISDS
+
+## Tasks for present week
+
+**The following todo's are not final**
+
+### Video
+- [ ] Discuss current story
+- [ ] Get equipment
+- [ ] Finish storyboard. Especially content of scene 12.2
+- [ ] Setup list of questions for LRZ interview
+- [ ] Decision: Interview in Böblingen?
+
+### Paper
+- [ ] General research on configuration management
+- [ ] Structurize content
+- [ ] More research on puppet
+- [ ] Continue writing paper
+
 ## Space for notes
 
 * System architecture part for both individually or single client-server introduction
 * Define Research question (Goal: provide a factual comparison to provide an informed decision of what system to use under which circumstances?)
-
 
 
 ## References
