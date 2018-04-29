@@ -37,6 +37,8 @@
 
 [Next-generation Configuration Management](https://www.usenix.org/system/files/login/articles/920/kanies_0.pdf)
 
+[Automated and Centralized System Configuration Management with Puppet](https://www.theseus.fi/bitstream/handle/10024/69933/thesis_report_final.pdf)
+
 [Puppet Emulator](https://puppet.com/products/emulator)
 
 [Puppet learning VM](https://puppet.com/download-learning-vm)
