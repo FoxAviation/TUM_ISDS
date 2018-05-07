@@ -63,7 +63,7 @@
 6. Working at computer at night
     * Setting
         * Night-time scene
-        * Else: Same setting as before...
+        * Same setting as before...
     * Camera
         * Static: Actor at table, some background (dark)
         * CU (screencast): OS showing a console
@@ -116,9 +116,9 @@
         * Actor goes to and opens the entrance of the LRZ, disappears inside
     * Sound
         * Actor voice, mono
-10. Sweep though the computer hall
+10. Sweep though the computer cube
     * Setting
-        * Inside the computing center of the LRZ
+        * Inside the computing cube of the LRZ
     * Camera
         * Tracking shot though the corridors of the computers
         * Tracking shot cables
@@ -135,12 +135,12 @@
     * Camera
         * Static: MCU and frontal to actor
     * Story
-        * <TODO: Required to understanding the concepts of configuration management>
+        * <TODO: Explain everything required to understanding the concepts of configuration management>
 12. What is configuration management?
 
     Alternating shots from __9.1__ and __9.2__
 
-    1. Interview LRZ (**Name of interview partner**)
+    1. Interview LRZ (Niels Fallenbeck)
         * Setting
             * Room
             * Two interview partners sitting on one side of a table
@@ -162,23 +162,23 @@
             * <TODO: Explanation of configuration management>
         * Sound
             * Actor, mono
-13. Outro
+13. Outro/Transition to presentation
     * Setting
         * Office
     * Camera
-        * MCU: Frontal, two actors
+        * MCU: Frontal, two actors, sitting at a table
     * Story
-        * Configuration management is complex, but there are tools out there to help
-        * Taking a look at Puppet and Chef in the next 20 minutes
-----
+        * Actor 1: Configuration management is complex and challenging, but there are tools out there to help you manage critical infrastructure
+        * Actor 2: Lts take a look at two popular configuration management tools: Puppet and Chef
+---- Presentation ----
 99. Credits
     * Setting
             * Credit roll left + outtakes right
     * Camera
         * -/-
     * Story
-        * Credit roll
-        * Outtakes
+        * Left: Credit roll
+        * Right: Outtakes
 
 
 # General notes (do not pay too much attention to this) #
