@@ -148,7 +148,7 @@
             * MCU: Frontal, both interview partners in view
             * CU: Interview partner
         * Story
-            * <TODO: How is configuration management done in the LRZ?>
+            * __lrz_interview_fallenbeck.md__
         * Sound
             * Both actors, stereo
     2. Greenscreen footage
@@ -159,7 +159,7 @@
             * MCU: Frontal
             * CU: Frontal
         * Story
-            * <TODO: Explanation of configuration management>
+            * <TODO>
         * Sound
             * Actor, mono
 13. Outro/Transition to presentation
@@ -175,7 +175,7 @@
     * Setting
             * Credit roll left + outtakes right
     * Camera
-        * -/-
+        * none
     * Story
         * Left: Credit roll
         * Right: Outtakes
@@ -191,7 +191,7 @@
         * Sweep though LRZ [~1 min material]
         * Somebody typing on a computer (CU: keyboard, entire table with actor and computer [15 sec material])
         * On-screen footage: Writing a traditional script
-        * Matrix-like numbers... (cmatrix screen recording) [5 sec material]
+        * Matrix-like numbers... (   cmatrix screen recording) [5 sec material]
         * Interview outtake for motivation [~ 3 min material]
 * How does configuration management work?
     * Features according to report
