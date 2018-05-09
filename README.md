@@ -43,6 +43,8 @@
 
 [Puppet learning VM](https://puppet.com/download-learning-vm)
 
+[Puppet documentation](https://puppet.com/docs)
+
 [Puppet architecture](https://puppet.com/docs/puppet/4.9/architecture.html)
 
 ### Chef
