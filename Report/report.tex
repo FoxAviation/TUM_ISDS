@@ -7,6 +7,9 @@
 \usepackage{url}		%Urls
 \usepackage{hyperref}	%Make urls clickable
 
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
 %For the outlining phase of this project, increase the number of nested itemize environments
 \usepackage{enumitem}
 \setlistdepth{20}
@@ -21,18 +24,16 @@
 \setlist[itemize,3]{label=*}
 
 %Inline code
+%\usepackage{listings}
+%\usepackage{color}
 \usepackage{listings}
-\usepackage{color}
-\definecolor{lightgray}{gray}{0.9}
-\lstset{
-	showstringspaces=false,
-	basicstyle=\ttfamily,
-	keywordstyle=\color{blue},
-	commentstyle=\color[grey]{0.6},
-	stringstyle=\color[RGB]{255,150,75},
-	keepspaces=true
-}
-\newcommand{\inlinecode}[2]{\colorbox{lightgray}{\lstinline[language=#1]$#2$}}
+\usepackage{xcolor}
+
+%Syntax-highlighing for the puppet language
+%Requires pygmentize [sudo apt-get install python-pygments]
+\usepackage{minted}
+\usemintedstyle{tango}
+
 \newcommand{\inlinedef}[1]{\colorbox{lightgray}{#1}}
 
 % copyright
@@ -61,7 +62,6 @@
 
 % The default list of authors is too long for headers.
 \renewcommand{\shortauthors}{F. Wieser et al.}
-
 
 \begin{abstract}
 \input{content/abstract}

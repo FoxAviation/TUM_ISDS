@@ -30,6 +30,7 @@
         * Office with table and laptop or stationary computer, showing a command line
         * Actor sitting at the desk
         * Cup of coffee on the table
+        * One stack of coffee cups
     * Camera
         * Static: MCU: Actor and table from side view, some background
         * CU: Person typing
@@ -41,6 +42,7 @@
         * CU (screencast): OS showing a console
             * Typing the command to install mysql
             * System showing dependency errors, ...
+            * Stackoverflow, ...
      * Sound
         * Music (Record atmo anyways)
 4. Timelapse clock
@@ -64,6 +66,7 @@
     * Setting
         * Night-time scene
         * Same setting as before...
+        * Multiple stack of coffee cups
     * Camera
         * Static: Actor at table, some background (dark)
         * CU (screencast): OS showing a console
@@ -140,6 +143,8 @@
 
     Alternating shots from __9.1__ and __9.2__
 
+    Dynamic, alternating switches between interviewer, Niels and greenscreen footage
+
     1. Interview LRZ (Niels Fallenbeck)
         * Setting
             * Room
@@ -165,9 +170,12 @@
 13. Outro/Transition to presentation
     * Setting
         * Office
+        * "Many" stack of coffee cups
     * Camera
         * MCU: Frontal, two actors, sitting at a table
     * Story
+        * In-Transition: After last greenscreen, physically remove greenscreen
+        * Actor 1: "Actor 2, we should think about proper configuration management"
         * Actor 1: Configuration management is complex and challenging, but there are tools out there to help you manage critical infrastructure
         * Actor 2: Lts take a look at two popular configuration management tools: Puppet and Chef
 ---- Presentation ----
