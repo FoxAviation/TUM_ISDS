@@ -11,7 +11,42 @@
         * Sound: alarm ringing
         * Sound: Pistol reloading, pistol shot and flash in window, alarm silent
         * Fade out to black
-2. Opening scene: Todo-List
+    * Alternative story
+        * Fade in from black
+        * Sound: Atmo: Early morning nature
+        * Sound: Alarm ringing
+        * Sound: Alarm being dropped into cup of water
+    * Sound
+        * Atmo: early morning nature
+        * Effect: Alarm ringing
+        * Pistol shot
+2. Entering office
+    * Setting
+        Inside office, door
+    * Camera
+        * Ultra close-up of door handle from side
+    * Story
+        * Handle beeing pushed down
+        * Door opening
+        * Actor enters office
+3. Making coffee
+    1. Selecting coffee
+        * Setting
+            * Coffee machine in office
+        * Camera
+            * Ultra close-up on selector panel of coffee machine
+            * Ultra close-up on display of coffee machine
+        * Story
+            * Actor pushing button on coffee machine
+    2. Coffee brewing
+        * Setting
+            * Coffee machine in office
+        * Camera
+            * Ultra close-up on coffee outlet of coffee machine, upper part of coffee cup visible, narrow focus
+        * Story
+            * Coffee beeing dispensed into cup until stop
+            * Actor removing cup from coffee machine
+4. Todo-List
     * Setting
         * View onto a whiteboard, showing a todo-list containing only "Install mysql"
     * Camera
@@ -24,7 +59,7 @@
         * Fade out to black
     * Sound
         * Early morning music, maybe radio news
-3. Opening scene: Failing hard
+5. Failing hard
     * Setting
         * Daylight
         * Office with table and laptop or stationary computer, showing a command line
@@ -45,7 +80,7 @@
             * Stackoverflow, ...
      * Sound
         * Music (Record atmo anyways)
-4. Timelapse clock
+6. Timelapse clock
     * Setting
         * Clock running
     * Camera
@@ -55,14 +90,14 @@
         * Fade-out to black
     * Sound
         * Clock ticking
-5. 11 hours later
+7. 11 hours later
     * Setting
         * Black screen, center text "11 hours later"
     * Story
         * Fade-out to black
     * Sound
         * Distinct gong
-6. Working at computer at night
+8. Working at computer at night
     * Setting
         * Night-time scene
         * Same setting as before...
@@ -80,7 +115,7 @@
         * Actor standing up, walking away
     * Sound
         * Music (Record atmo anyways)
-7. Title screen
+9. Title screen
     * Setting
         * Computer console
     * Camera
@@ -90,7 +125,7 @@
         * Console output: "A movie by: Daniel Federschmidt and Felix Wieser
     * Sound
         * Typing sound (live recording of typing?), mono
-8. Introduction: How is computer configuration done in computing centers?
+10. Introduction: How is computer configuration done in computing centers?
     * Setting
         * Same setting as scene 1
     * Camera
@@ -104,7 +139,7 @@
             * How do computing centers maintain thousands of computers?
     * Sound
         * Voices of the two actors, stereo
-9. Introduction to the LRZ
+11. Introduction to the LRZ
     * Setting
         * Daylight
         * Outdoor in front of the LRZ
@@ -119,7 +154,7 @@
         * Actor goes to and opens the entrance of the LRZ, disappears inside
     * Sound
         * Actor voice, mono
-10. Sweep though the computer cube
+12. Sweep though the computer cube
     * Setting
         * Inside the computing cube of the LRZ
     * Camera
@@ -131,7 +166,7 @@
         * Actor walking though corridor, trying to figure out how the computer infrastructur works
     * Sound
         * Music or ambient sound (Record anyways)
-11. Transition to explanatory part
+13. Transition to explanatory part
     * Setting
         * Inside the LRZ, maybe on the bridge or in the colored corridor
         * One actor frontal to the camera
@@ -139,9 +174,9 @@
         * Static: MCU and frontal to actor
     * Story
         * <TODO: Explain everything required to understanding the concepts of configuration management>
-12. What is configuration management?
+14. What is configuration management?
 
-    Alternating shots from __9.1__ and __9.2__
+    Alternating shots from __14.1__ and __14.2__
 
     Dynamic, alternating switches between interviewer, Niels and greenscreen footage
 
@@ -167,10 +202,10 @@
             * <TODO>
         * Sound
             * Actor, mono
-13. Outro/Transition to presentation
+15. Outro/Transition to presentation
     * Setting
         * Office
-        * "Many" stack of coffee cups
+        * "eMany" stack of coffee cups
     * Camera
         * MCU: Frontal, two actors, sitting at a table
     * Story
@@ -209,13 +244,13 @@
 
 
 # TODO #
-- [ ] Zeitplan festlegen
-- [ ] Interview-Partner festlegen
+- [X] Zeitplan festlegen
+- [X] Interview-Partner festlegen
 - [ ] Fragen für Interview
 - [X] Weitere Kameras notwendig?
 - [ ] Tontechnik ausleihen (Tonstudio)
 - [ ] Lichttechnik organisieren & ausprobieren
-- [ ] Drehorte festlegen (Wie sind die Rahmenbedingungen?)
+- [X] Drehorte festlegen (Wie sind die Rahmenbedingungen?)
 - [ ] Welche Animation, etc. notwendig?
 - [X] Sprecheraufnahmen im Studio möglich?!
 - [ ] Kameras & Zubehör durchklingeln
