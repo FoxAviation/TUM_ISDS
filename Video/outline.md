@@ -24,7 +24,7 @@
     * Setting
         Inside office, door
     * Camera
-        * Ultra close-up of door handle from side
+        * UCU of door handle from side
     * Story
         * Handle beeing pushed down
         * Door opening
@@ -34,15 +34,15 @@
         * Setting
             * Coffee machine in office
         * Camera
-            * Ultra close-up on selector panel of coffee machine
-            * Ultra close-up on display of coffee machine
+            * UCU on selector panel of coffee machine
+            * UCU on display of coffee machine
         * Story
             * Actor pushing button on coffee machine
     2. Coffee brewing
         * Setting
             * Coffee machine in office
         * Camera
-            * Ultra close-up on coffee outlet of coffee machine, upper part of coffee cup visible, narrow focus
+            * UCU on coffee outlet of coffee machine, upper part of coffee cup visible, narrow focus
         * Story
             * Coffee beeing dispensed into cup until stop
             * Actor removing cup from coffee machine
@@ -205,14 +205,14 @@
 15. Outro/Transition to presentation
     * Setting
         * Office
-        * "eMany" stack of coffee cups
+        * "Many" stack of coffee cups
     * Camera
         * MCU: Frontal, two actors, sitting at a table
     * Story
         * In-Transition: After last greenscreen, physically remove greenscreen
         * Actor 1: "Actor 2, we should think about proper configuration management"
         * Actor 1: Configuration management is complex and challenging, but there are tools out there to help you manage critical infrastructure
-        * Actor 2: Lts take a look at two popular configuration management tools: Puppet and Chef
+        * Actor 2: Lets take a look at two popular configuration management tools: Puppet and Chef
 ---- Presentation ----
 99. Credits
     * Setting
@@ -222,6 +222,15 @@
     * Story
         * Left: Credit roll
         * Right: Outtakes
+
+
+# Abbreviations
+Abbr.|Description
+------------------
+CU | Medium close-up
+MCU| Medium close-up
+UCU| Ultra close-up
+--------------------
 
 
 # General notes (do not pay too much attention to this) #
