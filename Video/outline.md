@@ -216,7 +216,7 @@
 ---- Presentation ----
 99. Credits
     * Setting
-            * Credit roll left + outtakes right
+        * Credit roll left + outtakes right
     * Camera
         * none
     * Story
