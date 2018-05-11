@@ -226,11 +226,11 @@
 
 # Abbreviations
 Abbr.|Description
-------------------
+-----|----
 CU | Medium close-up
 MCU| Medium close-up
 UCU| Ultra close-up
---------------------
+----|----
 
 
 # General notes (do not pay too much attention to this) #
