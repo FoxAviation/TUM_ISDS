@@ -4,13 +4,13 @@
 
 \subsection{Configuration Management (CM)}
 
-Configuration management tools act as an operating system abstraction layer, enabling the management of computational resources using automated processes defined in code, a paradigm often referred to as \textit{Infrastructure as Code}. Instead of provisioning and operating computer systems through hardware interaction and manual command-line interaction, specialized tools and definition formats were developed to make knowledge about the setup of computing environments explicit in a machine-readable format.
+Configuration management tools act as an operating system abstraction layer (OSAL), enabling the management of computational resources using automated processes defined in code, a paradigm often referred to as \textit{Infrastructure as Code}. Instead of provisioning and operating computer systems through hardware and manual command-line interaction, specialized tools and definition formats were developed to make knowledge about the setup of computing environments explicit in a machine-readable format.
 
 \subsection{Infrastructure as Code}
 
-Even before the emergence of CM tools, common task to run and maintain infrastructures consisting of networks, computers, storage servers, firewalls and monitoring systems were automated, usually through a plethora of scripts implementing the desired functionality specific for the infrastructure at hand. Often times, these environments would have to undergo significant efforts to rebuild their infrastructure from scratch in case of a disaster since their is not explicit description of the environments configuration available \cite{Hüttermann2012}.
+Even before the emergence of CM tools, common tasks to run and maintain infrastructures consisting of networks, computers, storage servers, firewalls and monitoring systems were automated, usually through a plethora of scripts implementing the desired functionality specific for the infrastructure at hand. Often times, these environments would have to undergo significant efforts to rebuild their infrastructure from scratch in case of a disaster since their is no explicit description of the environments configuration available \cite{Hüttermann2012}.
 
-Large-scale infrastructures constantly evolve and manual configuration is not sustainable in these settings. This is why many concepts from software development such as reusability and composability were adopted to create tools which make infrastructure configuration similiar to configuring software \cite{kanies2006puppet}. This enables the use of version control systems (VCS) for managing infrastructure in a collaborative manner like they are used in many software development projects.
+Large-scale infrastructures constantly evolve and manual configuration is not sustainable in these settings. This is why many concepts from software development such as reusability and composability were adopted to create tools which make infrastructure configuration similar to configuring software \cite{kanies2006puppet}. This enables the use of version control systems (VCS) for managing infrastructure in a collaborative manner like they are used in many software development projects.
 
 \subsection{Reasons for Configuration Management}
 
@@ -44,9 +44,6 @@ How do they work, what do they implement (comparison framework)
 	\begin{itemize}
 	\item Input Specification
 	\item Abstraction Mechanisms
-	\begin{itemize}
-		\item Def. OSAL (here maybe?)
-	\end{itemize}
 	\item Modularization Mechanisms
 	\item Relation Modeling
 	\item Input Specification
