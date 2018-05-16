@@ -10,4 +10,9 @@
 * 
 ### Research
 * How will configuration management look like in the near future? Whats changes do you expect?
+* Do you know when configuration management automation was first introduced at the lrz?
+* Why is it necessary to task about configuration management when talking about distributed systems?
+* Where do you see the benefits of using configuration management over traditional, manual provisioning
+* Was there ever a disaster at LRZ that configuration management helped alleviate?
+* How does configuration management relate to infrastructure security?
 
