@@ -222,16 +222,16 @@
     * Story
         * Left: Credit roll
         * Right: Outtakes
+    * Sound
+        * Music + audio from outtake as partial fade-in
 
 
 # Abbreviations
 Abbr.|Description
 -----|----
-CU | Medium close-up
-MCU| Medium close-up
-UCU| Ultra close-up
-----|----
-
+CU   | Medium close-up
+MCU  | Medium close-up
+UCU  | Ultra close-up
 
 # General notes (do not pay too much attention to this) #
 * What is the problem? Why configuration mangement?
