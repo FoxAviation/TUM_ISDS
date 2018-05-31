@@ -1,0 +1,70 @@
+LRZ DREHTAG
+Pre-Interview
+
+What does configuration look like without configuration management?
+
+Configuring software on a single machine is simple. You download the software compatible to operating system and hardware and 
+run the installation, modify settings - Done! So I'm working on a database project and it seems like the database I installed cannot handle all the load so I'm planning to distribute my database over multiple nodes. To do that I would have to log in into every machine one-by-one and install the software. This seems repetitive for me, so I wrote a script to install and configure a new database node automatically. 
+As my database deployment grows I have to find a solutions for lots of real-world challenges - how do I make sure configuration changes are made on every machine? How do I update my database and roll back the change in case of an issue? How do make sure that my nodes are securely configured? This is where configuration management tools come in. <CUT>
+
+What is configuration management?
+
+Configuration management is the process of systematically handling changes to a system in a way that it maintains integrity over time. This is achieved by tools that automatically configure server to reach a desired state specified by an administrator. 
+
+What are configuration management tools
+
+Configuration management tools let me configure my system infrastructure as code - so instead of manually updating und writing scripts I specify how my system looks like in a tool-specific file format. Usually the tool has it's own Domain Specific Language for creating these high-level descriptions of the server state. 
+
+
+LRZ Intro
+
+These configuration management tools were developed by people encountered the issue of keeping track of configuration for a larger set of servers and most tool development work around configuration management has been done by people working on large infrastructures themselves and active communities sharing their modules, packages and extensions to make the tool work for their real-world problem.
+But how is configuration management executed at scale? To find out we are at the Leibniz Supercomputing Centre, we're talking to Dr. Niels Fallenbeck who is working on the IT infrastructure at the LRZ. The LRZ is one of the biggest scientific computation centres in Europe and manages > 100.000 devices and over 1500 network components. They provide Computing services to customers such as the LRZ Compute Cloud which consisted of over 200k virtual machines in 2013.
+
+
+Interview
+
+General - CM at LRZ
+• How does configuration manangement look like at the LRZ?
+• For which reasons did the LRZ select this specific approach?
+• What everyday challenges do you face in configuration management?
+• Does the LRZ experience configuration drift and how do you deal with it? (NEW)
+
+Getting in touch with CM
+• Which are, from your perspective, the key items to consider when selecting a configuration management tool?
+• What advise would you give to somebody who plans to setup CM for the first time?
+
+Research
+• How will configuration management look like in the near future? Whats changes do you expect?
+• Do you know when configuration management automation was first introduced at the lrz?
+• Why is it necessary to task about configuration management when talking about distributed systems?
+• Where do you see the benefits of using configuration management over traditional, manual provisioning
+• Was there ever a disaster at LRZ that configuration management helped alleviate?
+• How does configuration management relate to infrastructure security?
+
+
+POST-Interview
+
+What are the benefits of configuration management
+
+• quick provisioning of new servers
+• fast recovery from critical events
+• version control for the server environment
+• easy replication of environments
+• documentation of infrastructure
+
+How are config management tools typically structured
+• each config managemnet tools have their own terminology and ecosystem but have similiar concepts
+• provide syntax and features to write provisioning scripts
+• track state of servers and ensure that packages are not installed again if they are already on the server - this is often referred to as idempotent behavior. 
+• provide global data about the system to be configured (facts on ip adresses, os, network interfaces)
+• extensible to adress the particular needs of the users - provisioning scripts are complex
+
+What to pay attention to when choosing a tool (might go into presentation conclusion)
+• infrastructure complexity - is it worth it to have such a tool or does it introduce more complexity?
+• learning curve - is it easy to learn / what is the skillset I / my team has?
+• cost - do I need support / does the tool fit my needs or do I need pay-to-use features?
+• community - does it have a community around it and are there parts I can use in my project?
+
+
+

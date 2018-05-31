@@ -14,40 +14,31 @@ Large-scale infrastructures constantly evolve and manual configuration is not su
 
 \subsection{Reasons for Configuration Management}
 
-	\begin{itemize}
-		\item Paradigm shift due to the complexity of modern web services
-		\item Enabling technologies: VCS, web frameworks
-			\begin{itemize}
-			\item \textit{Repeatability}
-			\item \textit{Automation}
-			\item \textit{Agility}
-			\item \textit{Scalability}
-			\item \textit{Reassurance}
-			\item \textit{Disaster Recovery}
-			\end{itemize}
-	\end{itemize}
+The use of a configuration management system allows to manage the evolution of an IT infrastructure similiar to the evolution of a codebase. Many of the reasons for using version control systems to manage code \cite{Dart:1991:CCM:111062.111063}\cite{1983ansi} carry over to the use of modern software configuration tools.
 
+\begin{description}
 
-	\begin{itemize}
-		\item Deploy many applications on many machines (a.k.a. nodes)
-		\item Manage nodes with different OS
-		\item Update an application on all nodes simultaneously
-		\item Simplify rollbacks
-		\item Keep environments consistent among multiple entities (i.e. dev/testing/production)
-		\item Keep records of all changes of the infrastructure
-	\end{itemize}
+\item[Identification] \hfill \\ 
+An identification scheme uniquely identifies every infrastructure component, their type and their configuration. 
+
+\item[Control] \hfill \\
+Changes to the infrastructure are applied through an automated process
+ensuring the consistent and correct application of changes.
+
+\item[Status Accounting]  \hfill \\
+Current system status and changes can be traced and used for troubleshooting of components or infrastructure improvement planning.
+
+\item[Audit and Review] \hfill \\
+Compliance and security can be automated and violations can be handled according to a customizable resolvement procedure.  
+
+\end{description}
 
 \subsection{Configuration Management Tools}
 
-How do they work, what do they implement (comparison framework)
-
-	\begin{itemize}
-	\item Input Specification
-	\item Abstraction Mechanisms
-	\item Modularization Mechanisms
-	\item Relation Modeling
-	\item Input Specification
-	\end{itemize}
+\todo{Needs some work}
+%why recent interest for config management tools (DevOps)
+%trends
+%why are we looking at chef & puppet
 
 
-What tools exist currently? why do we have a deeper look at chef and puppet?
+There are many commercial configuration management tools available today as well as open source software. The three most commonly used configuration tools are CFEngine, Chef and Puppet \cite{pandey2012investigating}. CFEngine was created in 1993 as a research project and gradually transformed into a mature open source solution for configuration management\cite{Zamboni:2012:LCA:2341102}. Puppet and Chef are newer developments and both maintain active open source communities \cite{pandey2012investigating}. This is also why these two tools are subject of the report.
