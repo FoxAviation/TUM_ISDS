@@ -168,11 +168,13 @@
         * Music or ambient sound (Record anyways)
 13. Transition to explanatory part
     * Setting
-        * Inside the LRZ, maybe on the bridge or in the colored corridor
-        * One actor frontal to the camera
+        * Entry hall of the LRZ
+        * In front of entry door
     * Camera
         * Static: MCU and frontal to actor
     * Story
+        * In das Foyer vom LRZ laufend, durch Türe durch, dann Intro-Satz, dann weiter laufen
+        * Walking into entry hall through door, introduction, continue walking
         * <TODO: Explain everything required to understanding the concepts of configuration management>
 14. What is configuration management?
 
