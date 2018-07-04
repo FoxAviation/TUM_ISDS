@@ -1,0 +1,218 @@
+% WRITTEN BY: Felix
+\section{Configuration Management Tools}
+
+\todo{Needs some work}
+%why recent interest for config management tools (DevOps)
+%trends
+%why are we looking at chef & puppet
+
+
+There are many commercial configuration management tools available today as well as open source software. The three most commonly used configuration tools are CFEngine, Chef and Puppet \cite{pandey2012investigating}. CFEngine was created in 1993 as a research project and gradually transformed into a mature open source solution for configuration management\cite{Zamboni:2012:LCA:2341102}. Puppet and Chef are newer developments and both maintain active open source communities \cite{pandey2012investigating}. This is also why these two tools are subject of the report.
+
+\subsection{Chef}
+Short intro to puppet and key design principles
+Found on \url{https://docs.chef.io/chef_overview.html}
+\begin{itemize}
+	\item Components
+	\begin{itemize}
+		\item Chef DK (Chef Development Kit)
+		\begin{itemize}
+			\item Computers running Chef DK are called Workstations
+			\item Creation of cookbooks
+			\item Test of cookbooks with Test Kitchen
+			\begin{itemize}
+				\item Describe Test Kitchen here
+			\end{itemize}
+			\item Components of workstations
+			\begin{itemize}
+				\item Knife
+				\begin{itemize}
+					\item Interface between local chef-repo and Chef server
+				\end{itemize}
+				\item The chef-repo
+				\begin{itemize}
+					\item Cookbook storage
+					\item "The chef-repo should be synchronized with a version control system (such as git), and then managed as if it were source code"\\ {\tiny \url{https://docs.chef.io/workstation.html#configure-ruby-environment}}
+				\end{itemize}
+				\item knife.rb
+				\begin{itemize}
+					\item File to specify configuration details for knife
+				\end{itemize}
+			\end{itemize}
+		\end{itemize}
+		\item Chef Server
+		\begin{itemize}
+			\item Hub for configuration data (cookbooks)
+			\item Pull configuration: Nodes pull cookbooks from server
+			\item Features
+			\begin{itemize}
+				\item Search any type of data that is indexed by the Chef server (features wildcards, etc.)
+				\item Management of
+				\begin{itemize}
+					\item Nodes
+					\item Cookbooks and recipes
+					\item Roles
+					\item Stores of JSON data (data bags), including encrypted data
+					\item Environments
+					\item User accounts and user data
+				\end{itemize}
+				\item data bag
+				\begin{itemize}
+					\item Global variable that is stored as JSON data
+					\item Accessible from Chef server
+					\item Indexed for searching
+				\end{itemize}
+				\item Policy
+				\begin{itemize}
+					\item Role
+					\begin{itemize}
+						\item Defines patterns and processes that exists across nodes
+						\item Chef client merges attributes and run-lists with assigned roles
+					\end{itemize}
+				\end{itemize}
+				\item Environment
+				\begin{itemize}
+					\item Maps the real-life workflow to the configuration items of Chef
+					\item Can be associated with one or more cookbook versions
+				\end{itemize}
+				\item Run-list
+				\begin{itemize}
+					\item Ordered list of roles and/or recipes
+					\item Items run in the order defined in the run-list
+					\item Can be node-specific
+					\item Stored as part of the node object on the Chef server
+					\item Maintenance with knife or Chef Automate
+				\end{itemize}
+			\end{itemize}
+		\end{itemize}
+		\item Chef client
+		\begin{itemize}
+			\item Must be installed on each node
+			\item Performs
+			\begin{itemize}
+				\item Registration and authentication of the node with the chef server
+				\item Building the node object
+				\item Synchronization of cookbooks
+				\item Compilation of the resource collection
+				\item Configuration of the node
+				\item Exception and notification handling
+			\end{itemize}
+		\end{itemize}
+		\item Ohai
+		\begin{itemize}
+			\item Collects system configuration data for use within cookbooks
+			\item Includes many built-in plugins to detect state
+			\item Attributes contain: OS, Network, Memory, Disk, CPU, Kernel, host names, virtualization, etc.
+		\end{itemize}
+		\item Chef Supermarket
+		\begin{itemize}
+			\item Sharing and management of community cookbooks
+		\end{itemize}
+	\end{itemize}
+	\item Cookbooks contain
+	\begin{itemize}
+		\item attributes
+		\item cookbook\_file
+		\item libraries: Ruby code can be included in a cookbook
+		\item metadata: Stored in \textit{metadata.rb}. Helps the server deploy the cookbooks to the nodes correctly
+		\item recipes
+		\begin{itemize}
+			\item Authored in Ruby
+			\item Collection of ressources
+			\item Must define everything that is needed to configure the node
+		\end{itemize}
+		\item ressources
+		\begin{itemize}
+			\item Describes the desired state for a configuration item
+			\item Describes the steps to achieve the desired state
+			\item Contains ressource type
+			\item Grouped into recipes
+		\end{itemize}
+		\item templates
+		\begin{itemize}
+			\item Used to dynamically generate static text files
+			\item May contain Ruby
+			\item Intended to manage configuration files
+		\end{itemize}
+		\item tests
+	\end{itemize}
+\end{itemize}
+
+
+\subsection{Puppet}
+short intro to puppet and it's key design principles 
+
+	\begin{itemize}
+		\item Short introduction to history (maybe?)
+		\item Idea: Balance between detail-hiding and required customization
+	\end{itemize}
+
+	\begin{itemize}
+		\item Consists of Puppet server and Puppet agents
+		\item Server (\url{https://puppet.com/docs/puppet/4.9/architecture.html})
+		\begin{itemize}
+			\item One or more servers can run the Puppet master application
+			\item 
+		\end{itemize}
+		\item Uses a master-slave architecture
+		\item Uses pull config
+		\item Ressource management:
+		\begin{itemize}
+			\item Manifests describe the node configuration
+			\item Groups of ressources can be organized into classes $\Rightarrow$ i.e. config for entire application can be grouped
+			\item Modules combine manifests and data to improve code organization
+		\end{itemize}
+		\item Server node connection via SSL works as follows:
+		\begin{enumerate}
+			\item Node sends normalized data, called facts, to the Puppet master and requests a catalog
+			\item Communication between Server and Client via HTTPS and client-verification (SSL certificate)
+			\item Server uses this data to compile a catalog, that specifies how the node should be configured
+			\item After applying the catalog, the agent submits a report to the Puppet master: The node reports back the successful config to the master (Visible on the Puppet Dashboard)
+		\end{enumerate}
+		\item Puppet can run as stand-alone architecture
+		\item Puppet language
+		\begin{itemize}
+			\item \textbf{Declarative} language
+			\item \textbf{Resource} can describe a single file or packet
+			\item Groups of resources can be organized as \textbf{Classes}
+			\item Files
+			\begin{itemize}
+				\item Files are called \textbf{Manifests}
+				\item Are named with \inlinedef{.pp}
+				\item Must use UTF-8
+				\item File example\\
+				\begin{minted}[obeytabs,gobble=4, linenos, bgcolor=white, fontsize=\tiny]{puppet}
+				case $operatingsystem {
+				centos, redhat: { $service_name = 'ntpd' }
+				debian, ubuntu: { $service_name = 'ntp' }
+				}
+				
+				package { 'ntp':
+				ensure => installed,
+				}
+				
+				service { 'ntp':
+				name      => $service_name,
+				ensure    => running,
+				enable    => true,
+				subscribe => File['ntp.conf'],
+				}
+				
+				file { 'ntp.conf':
+				path    => '/etc/ntp.conf',
+				ensure  => file,
+				require => Package['ntp'],
+				source  => "puppet:///modules/ntp/ntp.conf",
+				# This source file would be located on the Puppet master at
+				# /etc/puppetlabs/code/modules/ntp/files/ntp.conf
+				}
+				\end{minted}
+				\item Advertised benefits
+				\begin{itemize}
+					\item Easy to read "Self-documenting"
+					\item consistent nodes
+					\item well-tested by large community
+				\end{itemize}
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
