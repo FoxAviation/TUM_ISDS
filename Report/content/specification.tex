@@ -2,3 +2,35 @@
 \section{Characteristics of Configuration Management Tools}
 
 \subsection{Specification}
+
+\subsubsection{Input specification}
+
+% gui based or command line interface?
+
+% Explain: Declarative and imperative language
+As specification paradigms of configuration management tools, there are two approaches do specify infrastructure as code. 
+
+Firstly, declarative languages allow the description of the desired state of a system. Popular declarative languages are i.e. HTML or SQL, where you only describe the desired output of your query, but barely care about the actual execution of the required operations itself. In CM, the desired system state is compared to the actual state of each individual node. The translation agent then derives commands to configure each node appropriately \cite{delaet2010survey}.
+
+Secondly, i.e. popular languages like C and Java are called imperative. These describe the process to achieve a desired result, given a specified input. In terms of configuration management, the use of an imperative language requires to describe all steps to configure your systems in the desired way.
+
+% TODO: discuss advantages and disadvantages with example
+
+
+% TODO: Explain puppet language
+Reductive labs have specified their own language for Puppet, named "Puppet Language". This declarative language is inspired by the Nagios file format to be easily accessible by system administrators without requiring much programming experience \cite{puppetcomlangsum}.
+
+\begin{itemize}
+	\item Puppet language inspired by Nagios file format \url{https://puppet.com/docs/puppet/5.5/lang_summary.html}
+	\item Declarative language \cite{pandey2012investigating}
+	\item Resources: i.e. describe a single file, while class configures entire application \url{https://puppet.com/docs/puppet/5.5/lang_summary.html}
+\end{itemize}
+
+% TODO: Explain chef language
+
+
+\subsubsection{Abstraction mechanisms}
+
+\subsubsection{Modularization}
+
+\subsubsection{Dependency modelling}
