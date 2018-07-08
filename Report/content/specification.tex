@@ -5,32 +5,45 @@
 
 \subsubsection{Input specification}
 
-% gui based or command line interface?
-
-% Explain: Declarative and imperative language
 As specification paradigms of configuration management tools, there are two approaches do specify infrastructure as code. 
 
-Firstly, declarative languages allow the description of the desired state of a system. Popular declarative languages are i.e. HTML or SQL, where you only describe the desired output of your query, but barely care about the actual execution of the required operations itself. In CM, the desired system state is compared to the actual state of each individual node. The translation agent then derives commands to configure each node appropriately \cite{delaet2010survey}.
+Firstly, declarative languages allow the description of the desired state of a system. Popular declarative languages are i.e. HTML or SQL, where you only describe the desired output of your query, but barely care about the actual execution of the required operations itself. In CM, the desired system state is compared to the actual state of each individual node. The translation agent then derives commands to configure each node appropriately \cite{delaet2010survey}. Secondly, i.e. popular languages like C and Java are called imperative. These describe the process to achieve a desired result, given a specified input. In terms of configuration management, the use of an imperative language requires to describe all steps to configure your systems in the desired way.
 
-Secondly, i.e. popular languages like C and Java are called imperative. These describe the process to achieve a desired result, given a specified input. In terms of configuration management, the use of an imperative language requires to describe all steps to configure your systems in the desired way.
+Reductive labs have specified their own language for Puppet, named "Puppet Language". This declarative language is inspired by the Nagios file format to be easily accessible by system administrators without requiring much programming experience.
+% TODO: Describe ressources in the puppet language
+Similar to the main method in languages like C, Puppet begins the compilation process with the "main manifest", where a manifest is the term puppet uses for naming configuration files \cite{puppetcomlangsum}. These manifests are compiled into catalogs, which contain the data in the xml format.
 
-% TODO: discuss advantages and disadvantages with example
+Similar to Puppet's manifest files, Chef uses Recipes to specify configurations, which is done using their own Domain Specific Language as well as Ruby \cite{pandey2012investigating}. This language allows both, declarative and imperative elements and is designed to be especially human-understandable. With Ruby, Chef also stresses the so called "There is more than one way to do it" (TMTOWTDI) mentality, meaning that there are usually multiple possibilities to achieve a similar result for a specific configuration task. This enhances the user's flexibility to configure infrastructure \cite{https://docs.chef.io/recipes.html}. Recipes must be stored in a cookbook, a class-like structure, that can, but is not limited to Attributes and Recipes. A cookbook contains all necessary resources and policies for a configuration item \cite{chefiocookbooks}. 
 
-
-% TODO: Explain puppet language
-Reductive labs have specified their own language for Puppet, named "Puppet Language". This declarative language is inspired by the Nagios file format to be easily accessible by system administrators without requiring much programming experience \cite{puppetcomlangsum}.
-
-\begin{itemize}
-	\item Puppet language inspired by Nagios file format \url{https://puppet.com/docs/puppet/5.5/lang_summary.html}
-	\item Declarative language \cite{pandey2012investigating}
-	\item Resources: i.e. describe a single file, while class configures entire application \url{https://puppet.com/docs/puppet/5.5/lang_summary.html}
-\end{itemize}
-
-% TODO: Explain chef language
-
+Apart from the programming language, the interface of the user with the CM tool plays an important role in terms of usability. A graphical user interface typically provides a more intuitive way of interacting with the software. For this reason, GUI-based approaches allow to get in touch with the tool quicker. However, command-line interface allow for a steeper learning curves and the ability to not only interact with the tool faster, but also enable easy access through scripts \cite{delaet2010survey}.
 
 \subsubsection{Abstraction mechanisms}
 
+Configuration Management can be used for managing a wide variety of hardware. From servers and desktop computers to network devices, each device may look different from a configuration point of view. To manage these devices nevertheless, Puppet and Chef each provide abstraction mechanisms. These help to provide a uniform interface, even for complex heterogeneous infrastructure. Abstraction policies can range from high-level specifications, such as "I want three web-servers" down to the configuration of a file at bit level \cite{delaet2010survey}.
+
+The fundamental concept of abstraction in configuration management is resources, which describe the desired state for a configuration item amongst other things \cite{chefioresource}. These can be files and directories, as well as a user account or a service (i.e. SSH). Chef and Puppet each bring their own set of definable resources and with it their own terminology.
+
+Puppet defines a resource with a type, a name and a set of attributes \cite{pandey2012investigating}. If a tar.gz package would be required to be installed at version 1.16.1, the definition could look as follows:
+
+\begin{minted}[obeytabs,gobble=0, linenos, bgcolor=white, fontsize=\normalsize]{puppet}
+package { 'tar':
+	ensure => "1.16.1",
+}
+\end{minted}
+
+In contrast, a Chef resource is describes by a Ruby block that contains four components: a type, a name and the properties as well as actions required to perform the desired operation. The following example  shows the Ruby DSL code to again install a tar.gz package of version 1.16.1 \cite{chefioresource}:\\
+
+\begin{minted}[obeytabs,gobble=0, linenos, bgcolor=white, fontsize=\normalsize]{ruby}
+package 'tar' do
+	version '1.16.1'
+	action :install
+end
+\end{minted}
+
 \subsubsection{Modularization}
 
-\subsubsection{Dependency modelling}
+Modern IT infrastructure comprises of countless applications and services. Nevertheless, some of them are quite popular within an organization and even entire communities. To tackle the issue of rewriting configurations that might already exist or can be recycled, Puppet and Chef have developed their own pool, where users can publish or search for and reuse existing configurations with the entire community or locally within their organization.
+
+
+
+\subsubsection{Dependency modeling}
