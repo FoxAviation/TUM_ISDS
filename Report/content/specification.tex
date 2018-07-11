@@ -9,7 +9,7 @@ As specification paradigms of configuration management tools, there are two appr
 
 Firstly, declarative languages allow the description of the desired state of a system. Popular declarative languages are i.e. HTML or SQL, where you only describe the desired output of your query, but barely care about the actual execution of the required operations itself. In CM, the desired system state is compared to the actual state of each individual node. The translation agent then derives commands to configure each node appropriately \cite{delaet2010survey}. Secondly, i.e. popular languages like C and Java are called imperative. These describe the process to achieve a desired result, given a specified input. In terms of configuration management, the use of an imperative language requires to describe all steps to configure your systems in the desired way.
 
-Reductive labs have specified their own language for Puppet, named "Puppet Language". This declarative language is inspired by the Nagios file format to be easily accessible by system administrators without requiring much programming experience.
+Reductive labs have specified their own language for Puppet, named "Puppet Language". This declarative language is inspired by the Nagios file format to be easily accessible by system administrators without requiring much programming experience. Puppet advertises this language  as self-documenting.
 % TODO: Describe ressources in the puppet language
 Similar to the main method in languages like C, Puppet begins the compilation process with the "main manifest", where a manifest is the term puppet uses for naming configuration files \cite{puppetcomlangsum}. These manifests are compiled into catalogs, which contain the data in the xml format.
 
@@ -54,12 +54,15 @@ In complex IT-infrastructures, configuration tasks come with some implicit depen
 
 In configuration management, one distinguishes thee types of relations \cite{delaet2010survey}:
 \begin{description}
-	\item[Instance-Instance] Instance-to-instance relations comprise multiple instances of configuration items on either the same or different devices. A web-server might be dependent on the existence of a database.
-	\item[Instance-Parameter] Instances can not only depend on other instances, but also external parameters. There may for example be a server, that requires a specific port to be forwarded from the router by setting an appropriate entry in a configuration file.
-	\item[Parameter-Parameter] Finally, parameters can relate to other parameters. There may be a setup including some servers and a router, where the router forwards connections to the servers IP. So whenever the local IP address of the server changes, the router must set its forwarding record appropriately.
+\item[Instance-Instance] \hfill \\ 
+Instance-to-instance relations comprise multiple instances of configuration items on either the same or different devices. A web-server might be dependent on the existence of a database.
+\item[Instance-Parameter] \hfill \\ 
+Instances can not only depend on other instances, but also external parameters. There may for example be a server, that requires a specific port to be forwarded from the router by setting an appropriate entry in a configuration file.
+\item[Parameter-Parameter] \hfill \\ 
+Finally, parameters can relate to other parameters. There may be a setup including some servers and a router, where the router forwards connections to the servers IP. So whenever the local IP address of the server changes, the router must set its forwarding record appropriately.
 \end{description}
 
-Puppet has realized modeling relations though metaparameters, which affect how Puppet executes the configuration of nodes. There is a wide variety of such metaparameters specified, which affect different characteristics of the configuration. This contains a notification system, that refreshes resources that have subscribed to changes of a specific resource. Scheduling enables i.e. the execution of a command in frequent time intervals.
+Puppet has realized modeling relations though so called metaparameters, which affect how Puppet executes the configuration of nodes. There is a wide variety of such metaparameters specified, which affect different characteristics of the configuration. This contains a notification system, that refreshes resources that have subscribed to changes of a specific resource. Scheduling enables i.e. the execution of a command in frequent time intervals.
 
 \begin{minted}[obeytabs,gobble=0, linenos, bgcolor=white, fontsize=\normalsize]{puppet}
 schedule { 'everyday':
@@ -73,4 +76,4 @@ exec { "/usr/bin/apt-get update":
 
 The capabilities of the metaparameter system do not end here, but also contains other powerful commands, like specifying the level of detail in which logs are created and much more  \cite{puppetcommetaparameter}.
 
-Chef provides similar capability though a set of tools. It provides explicit inheritance and notifications. The notification system is, just like in Puppet, based on notifies and subscriptions, but not limited to that. Timers allow for explicit definition of execution order and delays in between commands. This allows i.e. for restarting a service prior or after the update of a resource. Finally, jobs can be defined so that they run before the actual execution phase of a chef run, where the configuration takes place normally \cite{chefiocommonfunc}.
+Chef provides similar capability though a set of tools. The notification system is, just like in Puppet, based on notifies and subscriptions, but not limited to that. Timers allow for explicit definition of execution order and delays in between commands. It can also be specified, that a configuration task should be executed immediately after a prior operation. This allows i.e. for restarting a service immediately prior or after the update of a resource. Finally, jobs can be defined so that they run before the actual execution phase of a chef run, where the configuration takes place under normal circumstances \cite{chefiocommonfunc}.
