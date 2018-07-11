@@ -12,7 +12,12 @@ There are many commercial configuration management tools available today as well
 
 \subsection{Puppet}
 
-In 2003, Reductive Labs announced an alternative to CFEngine 2, which was released in 2001 \cite{pandey2012investigating}. Written by the system administrator and owner of Reductive Labs, Luke Kanies, Puppet aims to simplify the life of system administrators and provide an Operating System Abstraction Layer (OSAL) \cite{kanies2006puppet}. In 2005, Puppet was released unter GPL, which turned out to make using it difficult for some companies. For this reason, Reductive Labs relicensed Puppet in 2011 under the Apache license \cite{puppetcomapache}. There are two versions of Puppet available. First, Open Source Puppet, which comes with a limited set of features and no commercial support, but which is available free of charge. The paid Enterprise package on the other hand aims for handling more complex infrastructure and provides more functionality, such as reporting tools and node management \cite{puppetcomenterprise}.
+In 2003, Reductive Labs announced an alternative to CFEngine 2, which was released in 2001 \cite{pandey2012investigating}. Written by the system administrator and owner of Reductive Labs, Luke Kanies, Puppet aims to simplify the life of system administrators and provide an Operating System Abstraction Layer (OSAL) \cite{kanies2006puppet}.
+\begin{description}
+	\item [Operating System Abstraction Layer] \hfill \\
+	provide an abstraction from operating system specific commands i.e. in the form of wrapper functions. This allows for configuring devices in an abstract way. Upon compilation, the abstract description can than be translated into OS specific commands.
+\end{description}
+In 2005, Puppet was released unter GPL, which turned out to make using it difficult for some companies. For this reason, Reductive Labs relicensed Puppet in 2011 under the Apache license \cite{puppetcomapache}. There are two versions of Puppet available. Open Source Puppet comes with a limited set of features and no commercial support, but is available free of charge. The paid Enterprise package aims for handling more complex infrastructure and provides more functionality, such as reporting tools and node management \cite{puppetcomenterprise}.
 
 
 %\begin{itemize}
@@ -93,7 +98,10 @@ In 2003, Reductive Labs announced an alternative to CFEngine 2, which was releas
 
 \subsection{Chef}
 
-In January 2009, Jesse Robbins, the Co founder of Opscode \cite{mittechreviewrobbins}, introduced a new systems integration framework Chef \cite{chefcomannouncement}. With the concept of providing a simple and flexible interface to define infrastructure as code, Chef quickly gained popularity.  \cite{pandey2012investigating}.
+In January 2009, Jesse Robbins, the Co founder of Opscode \cite{mittechreviewrobbins}, introduced a new systems integration framework Chef \cite{chefcomannouncement}. With the concept of providing a simple and flexible interface to define infrastructure as code, Chef quickly gained popularity \cite{pandey2012investigating}.
+Similar to Puppet, Chef is available as free open source as well as a paid version, called Chef Automate. The free open source package is again limited in regard to features and provides no commercial support. In addition to the open source capabilities, Chef Automate provides additional tools to monitor the infrastructure and diagnose configuration errors. Commercial support is included as well \cite{chefiodatasheet}.
+\todo{Enhance}
+
 %Short intro to chef and key design principles
 %Found on \url{https://docs.chef.io/chef_overview.html}
 %\begin{itemize}

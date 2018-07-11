@@ -19,20 +19,22 @@ Apart from the programming language, the interface of the user with the CM tool 
 
 \subsubsection{Abstraction mechanisms}
 
-Configuration Management can be used for managing a wide variety of hardware. From servers and desktop computers to network devices, each device may look different from a configuration point of view. To manage these devices nevertheless, Puppet and Chef each provide abstraction mechanisms. These help to provide a uniform interface, even for complex heterogeneous infrastructure. Abstraction policies can range from high-level specifications, such as "I want three web-servers" down to the configuration of a file at bit level \cite{delaet2010survey}.
+Configuration Management can be used for managing a wide variety of hardware. From servers and desktop computers to network devices, each device may look different from a configuration point of view. To manage these devices nevertheless, Puppet and Chef each provide abstraction mechanisms. These help to provide a uniform interface, even for complex heterogeneous infrastructure. Abstraction policies can range from high-level specifications, such as the specification of required database servers, down to the configuration of a file at bit level \cite{delaet2010survey}.
 
 The fundamental concept of abstraction in configuration management is resources, which describe the desired state for a configuration item amongst other things \cite{chefioresource}. These can be files and directories, as well as a user account or a service (i.e. SSH). Chef and Puppet each bring their own set of definable resources and with it their own terminology.
 
 Puppet defines a resource with a type, a name and a set of attributes \cite{pandey2012investigating}. If a tar.gz package would be required to be installed at version 1.16.1, the definition could look as follows:
 
+\todo{Find a nicer example}
 \begin{minted}[obeytabs,gobble=0, linenos, bgcolor=white, fontsize=\normalsize]{puppet}
 package { 'tar':
 	ensure => "1.16.1",
 }
 \end{minted}
 
-In contrast, a Chef resource is describes by a Ruby block that contains four components: a type, a name and the properties as well as actions required to perform the desired operation. The following example  shows the Ruby DSL code to again install a tar.gz package of version 1.16.1 \cite{chefioresource}:\\
+In contrast, a Chef resource is describes by a Ruby block that contains four components: a type, a name and the properties as well as actions required to perform the desired operation. The following example  shows the Ruby DSL code to again install a tar.gz package of version 1.16.1 \cite{chefioresource}:
 
+\todo{Find a nicer example}
 \begin{minted}[obeytabs,gobble=0, linenos, bgcolor=white, fontsize=\normalsize]{ruby}
 package 'tar' do
 	version '1.16.1'
