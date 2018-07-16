@@ -1,0 +1,28 @@
+@startuml
+
+actor "Operator" as ops
+
+component "Translation agent" as ta
+
+frame "Managed device" as md1 {
+ component "Deployment Agent" as da1
+}
+frame "Managed device"  as md2 {
+ component "Deployment Agent" as da2
+}
+frame "Managed device"  as md3 {
+ component "Deployment Agent" as da3
+}
+
+database "Repository" as repo {
+    file "Configurations" as cfg
+}
+
+ops -right-> cfg
+
+cfg --> ta
+
+ta --> md1: profile
+ta --> md2: profile
+ta --> md3: profile
+@enduml

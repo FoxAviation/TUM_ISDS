@@ -3,22 +3,19 @@
 
 Apart from the technical details, there are further criteria to be considered when selecting a configuration management tool. These criteria concern the ongoing support in terms of maintenance of the tool itself, as well as available technical support when dealing with issues in one's particular setup.
 
-\subsubsection{Documentation}
-
+\subsubsection{Documentation}\hfill\\
 When getting in touch with a new tool, having sufficient documentation available is key for a steep learning curve. Even when the user is a already familiar with a particular tool, documentation will help by specifying the exact behavior of the tool and describe more efficient ways to achieve a desired goal. This may especially be important, if operations have unintuitive side effects or contain identified bugs.
 
 Puppet's documentation is hosted on GitHub and available since the end of 2009 and maintained until today by 183 contributors. It consists mainly of HTML documentation and some cheatsheets \cite{githubpuppetdocs}.
 
 Chef also maintains their official documentation on GitHub. The repository is available since 2016, created and maintained by a total of 209 contributors. In comprises of both Chef packages, the open source version and Chef Automate, as well as the Software Development Kit (SDK) \cite{githubchefdocs}.
 
-\subsubsection{Maturity}
-
+\subsubsection{Maturity}\hfill\\
 When software is just released, there is a high chance for it to crash or behave in an undefined way. Over time, these issues are corrected shortly after detection, so that the software gets more and more stable. When operating critical infrastructure, the maturity of software must therefore be taken into serious consideration to ensure high availability and reliability.
 
 Comparing the interest in Puppet and Chef, it can be seen that Puppet has been about twice as  popular as Chef for most of the time \cite{googlepuppetvschef}. However, this just shows passive interest in each tool. When comparing the number of commits to the respective repositories on GitHub, Chef received significantly more commits than Puppet in the last 3 years \cite{githubpuppetpulse} \cite{githubchefpulse}. This indicates, that the contributing community of Chef is more active compared to Puppet. However, both tools are considered stable and mature \cite{delaet2010survey}.
 
-\subsubsection{Commercial support}
-
+\subsubsection{Commercial support}\hfill\\
 The breakdown of critical infrastructure may have a serious impact on its environment. Therefore, support plays a critical role in such applications. Commercial support not only allows for long term support of the tool and help when dealing with bugs and breakdowns, but may also offer training opportunities \cite{delaet2010survey}.
 
 Puppet Enterprise offers both, short term support (STS) and long term support (LTS) releases. While STS packages are released every six months and focus on the implementation of new features and quick application of patches, LTS releases are supposed to be very stable and are published every 18 months. The typical support time of LTS releases are about 2 years, while LTS are limited to less than a year \cite{puppetcomenterpriselifecycle}.
@@ -26,8 +23,7 @@ Puppet Enterprise offers both, short term support (STS) and long term support (L
 Chef Automate offers support on weekdays and provides an additional Premium model for 24/7 availability.
 \todo{What else does Chef Automate offer in terms of support?}
 
-\subsubsection{Community}
-
+\subsubsection{Community}\hfill\\
 Apart from the official documentation, there is a lot more information available, mostly created and maintained by the community in the form of forums, wiki's and social networks \cite{delaet2010survey}. Not only do they provide answers to existing questions, but allow active discussions with the community and allow to learn from other users experience. Additionally, the community usually plays an important role in the life-cycle of a tool by creating extensions, reporting bugs or even offering patches. This is especially important if a particular software is open-source and therefore allows direct influence on it's development. GitHub alone hosts approximately 85 million projects \cite{githubabout}.
 
 While acquiring total numbers of each tools community may simply not be possible, analyzing some peripheral parameters may provide some insights on the relative size of each community \cite{pandey2012investigating}. In addition to that, the general development of interest can be visualized though analysis of search-engine activity. While Puppet seems to be more popular by a factor of 2, both tools show an increasing popularity until 2015. However a slight decrease in interest can be observed since 2015. The loss of Puppet's popularity appears to be greater than Chef, which only shows a slight drop of about 10 percent relative to Puppet's peak popularity \cite{googlepuppetvschef}.

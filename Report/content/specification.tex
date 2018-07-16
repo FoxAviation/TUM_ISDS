@@ -3,8 +3,7 @@
 
 \subsection{Specification}
 
-\subsubsection{Input specification}
-
+\subsubsection{Input specification}\hfill\\
 As specification paradigms of configuration management tools, there are two approaches do specify infrastructure as code. 
 
 Firstly, declarative languages allow the description of the desired state of a system. Popular declarative languages are i.e. HTML or SQL, where you only describe the desired output of your query, but barely care about the actual execution of the required operations itself. In CM, the desired system state is compared to the actual state of each individual node. The translation agent then derives commands to configure each node appropriately \cite{delaet2010survey}. Secondly, i.e. popular languages like C and Java are called imperative. These describe the process to achieve a desired result, given a specified input. In terms of configuration management, the use of an imperative language requires to describe all steps to configure your systems in the desired way.
@@ -17,8 +16,7 @@ Similar to Puppet's manifest files, Chef uses Recipes to specify configurations,
 
 Apart from the programming language, the interface of the user with the CM tool plays an important role in terms of usability. A graphical user interface typically provides a more intuitive way of interacting with the software. For this reason, GUI-based approaches allow to get in touch with the tool quicker. However, command-line interface allow for a steeper learning curves and the ability to not only interact with the tool faster, but also enable easy access through scripts \cite{delaet2010survey}.
 
-\subsubsection{Abstraction mechanisms}
-
+\subsubsection{Abstraction mechanisms}\hfill\\
 Configuration Management can be used for managing a wide variety of hardware. From servers and desktop computers to network devices, each device may look different from a configuration point of view. To manage these devices nevertheless, Puppet and Chef each provide abstraction mechanisms. These help to provide a uniform interface, even for complex heterogeneous infrastructure. Abstraction policies can range from high-level specifications, such as the specification of required database servers, down to the configuration of a file at bit level \cite{delaet2010survey}.
 
 The fundamental concept of abstraction in configuration management is resources, which describe the desired state for a configuration item amongst other things \cite{chefioresource}. These can be files and directories, as well as a user account or a service (i.e. SSH). Chef and Puppet each bring their own set of definable resources and with it their own terminology.
@@ -42,16 +40,14 @@ package 'tar' do
 end
 \end{minted}
 
-\subsubsection{Modularization}
-
+\subsubsection{Modularization}\hfill\\
 Modern IT infrastructure comprises of countless applications and services. Configuring every device independently would imply a low of repetitive work and be error prone. Similar to the concept of inheritance, that exists in object-oriented programming, modularization enables to abstract from specific devices and create groups and associations with other nodes, as well as common configuration parameters. These groups can not only be flat, but may have engraved some type of hierarchical structure \cite{delaet2010survey}. This allows i.e. for an abstract specification of the infrastructure and specific configuration for devices, that inherit their parameters from the abstract description. Such a hierarchical system remains very flexible, because configurations mostly take place on abstract layers. Therefore configurations can easily be reused.
 
 Within an organization of even entire communities, configuration tasks can be very similar. This could for example be setting up an SSH service or the configuration of a DNS system. To tackle the issue of rewriting configurations that already exist or can be easily recycled, Puppet and Chef have developed their own pool, where users can publish or search for and reuse existing configurations with the entire community or locally within their organization.
 
 \todo{Describe forge and supermarket}
 
-\subsubsection{Dependency modeling}
-
+\subsubsection{Dependency modeling}\hfill\\
 In complex IT-infrastructures, configuration tasks come with some implicit dependencies, that must be or remain fulfilled. This may for example be the configuration of some access rights, which require the successful installation of the affected service on the device. Explicitly handling such relations help keeping the infrastructure consistent.
 
 In configuration management, one distinguishes thee types of relations \cite{delaet2010survey}:
