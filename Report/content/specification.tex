@@ -1,7 +1,7 @@
 %WRITTEN BY: Felix
 \section{Characteristics of Configuration Management Tools}
 
-Evaluating concrete CM tools can be challenging due to the separate feature sets of open source components and enterprise versions. \cite{delaet2010survey} defines a framework for comparing system configurations along four major characteristics. The following section introduces the individual aspects and evaluates both Chef and Puppet according to the framework.
+Evaluating concrete CM tools can be challenging due to the separate feature sets of open source components and enterprise versions. \cite{delaet2010survey} defines a framework for comparing system configurations along four major characteristics. The following section introduces the individual aspects and evaluates both Chef and Puppet according to this framework.
 
 \subsection{Specification}
 
@@ -50,7 +50,7 @@ file { 'ntp.conf':
 
 
 % Chef
-Chefs input specification is a Ruby-based DSL \cite{pandey2012investigating} and allows both, declarative and imperative elements and is designed to be especially human-understandable. With Ruby, Chef also stresses the mentality of offering multiple approaches to a specific problem the user's flexibility to configure infrastructure \cite{chefiorecipe}. Resource definitions in the Chef DSL are mostly declarative (see Figure \ref{lst:chefntp}) but since it is a Ruby-based DSL every programming paradigm supported by Ruby can be used such as object orientation, imperative procedures or functional principles.
+Chefs input specification is a Ruby-based DSL \cite{pandey2012investigating} which allows both, declarative and imperative elements and is designed to be especially human-understandable. With Ruby, Chef also stresses the mentality of offering multiple approaches to a specific problem and therefore increases the user's flexibility to configure infrastructure \cite{chefiorecipe}. Resource definitions in the Chef DSL are mostly declarative (see Figure \ref{lst:chefntp}) but since it is a Ruby-based DSL every programming paradigm supported by Ruby can be used such as object orientation, imperative procedures or functional principles.
 
 \begin{listing}[H]
 \caption{Basic Chef recipe for managing NTP}
@@ -77,7 +77,7 @@ end
 
 In terms of input specification, Puppet offers a limited yet powerful interface for modeling infrastructure in a declarative manner while Chef provides more flexibility due to the DSL being based on Ruby. Overall both tools aim to provide powerful declarative primitives because imperative scripts might not be idempotent which makes it more difficult for configuration management tools to apply configuration to reach the desired system state.
 
-Apart from the input specification language, the interface of the user with the CM tool plays an important role in terms of usability. Graphical user interfaces typically provides a more intuitive way of interacting with software. While both tools offer web-based interfaces for status reporting and monitoring in their commercial offerings, the input specification is purely command-line- \& code-based.
+Apart from the input specification language, the interface of the user with the CM tool plays an important role in terms of usability. Graphical user interfaces typically provide a more intuitive way of interacting with software. While both tools offer web-based interfaces for status reporting and monitoring in their commercial offerings, the input specification is purely command-line- \& code-based.
 
 \subsubsection{Abstraction mechanisms}\hfill\\
 
@@ -85,20 +85,20 @@ The fundamental concept of abstraction in configuration management are \textit{R
 
 In Puppet, Resources are the basic building block for configurations. They are organized in \textit{Manifest} files. Puppet allows to group a set of related resources into \textit{Classes} which can be nested to build complex abstractions for services \cite{puppetcomlangsum}.
 
-Chef groups Resources in \textit{Recipe} files which are combined into \textit{Cookbooks}. 
+Chef groups resources in \textit{Recipe} files which are combined into \textit{Cookbooks}. 
 
 Both Chef and Puppet each bring their own set of definable resources and with it their own terminology for enabling users to create high-level abstractions on top of. Both tools support to create custom resource types \cite{chefcustomresources}\cite{puppetcustomtypes}.
 
 
 \subsubsection{Modularization}\hfill\\
 
-Modern IT infrastructures usually consist of many applications and services. Defining configuration for every individual host would be repetetive and error-prone. Similar to the concept of inheritance, that exists in object-oriented programming, modularization enables to abstract from specific devices and create groups and associations with other nodes, as well as common configuration parameters. These groups can not only be flat, but may have engraved some type of hierarchical structure \cite{delaet2010survey}. This allows for an abstract specification of the infrastructure and specific configuration for devices, that inherit their parameters from the abstract description. Such a hierarchical system remains very flexible, because configurations mostly take place on abstract layers. Therefore configurations can easily be reused.
+Modern IT infrastructures usually consist of many applications and services. Defining configurations for every individual host would be repetitive and error-prone. Similar to the concept of inheritance, that exists in object-oriented programming, modularization enables to abstract from specific devices and create groups and associations with other nodes, as well as common configuration parameters. These groups can not only be flat, but may have engraved some type of hierarchical structure \cite{delaet2010survey}. This allows for an abstract specification of the infrastructure and specific configuration for devices, that inherit their parameters from the abstract description. Such a hierarchical system remains very flexible, because configurations mostly take place on abstract layers. Therefore configurations can easily be reused.
 
 Puppet has the concept of \textit{Roles} and \textit{Profiles} to achieve re-use of configurations across nodes. A Profile is a type of class which configures a layered technology stack, a trait of a system. An example would be a profile ensuring the appropriate version of Java is installed. Roles combine multiple profiles together to form a configuration for a certain type of host, eg. application servers. Profiles can be re-used across roles. To organize and share those higher-level definitions, classes can be bundled into shareable \textit{Modules}.
 
 Similiar to Puppet, Chef has a concept of \textit{Roles}. Roles are comprised of a \texttt{run\_list} which is a sequence of recipes to be executed on a host which has the role assigned.
 
-Both CM tools provide the facilities to re-use configurations. But an organization of even entire communities, configuration tasks can be very similar. To tackle the issue of rewriting configurations that already exist or can be easily recycled, Puppet and Chef have developed their own repository structures where users can publish or search for existing configurations with the entire community or locally within their organization. Puppet has \textit{Forge} which is a public repository for sharing Modules. Analogously, Chef has a service named \textit{Supermarket} where Cookbooks can be shared.
+Both CM tools provide the facilities to re-use configurations. But an organization or even entire communities, configuration tasks can be very similar. To tackle the issue of rewriting configurations that already exist or can be easily recycled, Puppet and Chef have developed their own repository structures where users can publish or search for existing configurations with the entire community or locally within their organization. Puppet has \textit{Forge} which is a public repository for sharing Modules. Analogously, Chef has a service named \textit{Supermarket} where Cookbooks can be shared.
 
 \subsubsection{Dependency modeling}\hfill\\
 In complex IT-infrastructures, configuration tasks come with some implicit dependencies, that must be or remain fulfilled. This may for example be the configuration of some access rights, which require the successful installation of the affected service on the device. Explicitly handling such relations help keeping the infrastructure consistent.
@@ -110,7 +110,7 @@ Instance-to-instance relations comprise multiple instances of configuration item
 \item[Instance-Parameter] \hfill \\ 
 Instances can not only depend on other instances, but also external parameters. There may for example be a server, that requires a specific port to be forwarded from the router by setting an appropriate entry in a configuration file.
 \item[Parameter-Parameter] \hfill \\ 
-Parameters can relate to other parameters. There may be a setup including some servers and a router, where the router forwards connections to the servers IP. So whenever the local IP address of the server changes, the router must set its forwarding record appropriately.
+Parameters can relate to other parameters. Given a setup, including some servers and a router, where the router forwards connections to the servers IP. Whenever the local IP address of the server changes, the router must set its forwarding record appropriately.
 \end{description}
 
 Puppet has realized modeling relations though so called metaparameters, which affect how Puppet executes the configuration of nodes. There is a wide variety of such metaparameters specified, which affect different characteristics of the configuration. One way to model dependencies is its notification system that refreshes resources that have subscribed to changes of a specific resource \cite{puppetcommetaparameter}. This is illustrated in the \texttt{service} Resource defined in Listing \ref{lst:puppetntp} where the service is subscribed and therefore restarted whenever it's configuration file is changed. 
