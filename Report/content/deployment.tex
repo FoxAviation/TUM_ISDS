@@ -2,7 +2,7 @@
 \subsection{Deployment}
 
 \subsubsection{Architecture}\hfill\\
-Every configuration management tool requires an architecture which supports the management of a set of hosts. Chef and Puppet both implement a Master-Agent design where there exists a centralized control server and an agent program is installed on every managed device [Fig. \ref{fig:architecture}]. The centralized control server is responsible to keep a canonical state of configuration as provided by the operator in a repository and translates the configuration into profiles for every node.
+Every configuration management tool requires an architecture which supports the management of a set of hosts. A popular architecture is illustrated in Figure \ref{fig:architecture} where a centralized control server manages the configuration and an agent program is installed on every managed device. The centralized control server is responsible to keep a canonical state of configuration as provided by the operator in a repository and translates the configuration into profiles for every node.
 
 \begin{figure*}
 \includegraphics[height=2in]{assets/architecture}
@@ -18,8 +18,10 @@ Component & Chef & Puppet \\
 Translation Agent  & Chef Server  & Puppet Master \\
 Deployment Agent & Chef Client & Puppet Agent \\
 \end{tabular}
+\label{tbl:components}
 \end{table}
 
+Chef and Puppet both follow this pattern and the only differ in terms of technology for implementing the architecture and the terminology used (See Table).
 
 \subsubsection{Distribution Mechanism}\hfill\\
 In order to distribute configurations from the centralized control server there are two mechanisms tools implement.
@@ -34,9 +36,8 @@ In order to distribute configurations from the centralized control server there 
 	
 \end{description}
 
-While Chef and Puppet both are pull-based systems both tools have implemented capabilities to manually trigger configuration distribution outside of the regular pull-schedule. For Chef the \textit{Push Jobs} extension allows jobs to be run independently from a chef-client run. Puppet allows for similiar behaviour through external orchestration tools such as MCollective \cite{mcollective}.
 
-Pull-based systems have been shown to scale better to a larger number of managed devices.
+Chef and Puppet both are pull-based systems because it has been shown that the pull-based approach scales better to a large number of managed hosts but both CM tools have implemented capabilities to manually trigger configuration distribution outside of the regular pull-schedule. For Chef the \textit{Push Jobs} extension allows jobs to be run independently from the periodic configuration convergence. Puppet allows for similiar behaviour through external orchestration tools such as MCollective \cite{mcollective}.
 
 \subsubsection{Platform Support}\hfill\\
 
