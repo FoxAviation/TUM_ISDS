@@ -1,2 +1,39 @@
 %WRITTEN BY: Daniel
 \subsection{Management}
+
+The configuration management tool does not operate in a vacuum but needs to work well together with existing tools, infrastructure and software development procedures.
+
+\subsubsection{Testing}\hfill\\
+Similiar to application code, configuration changes need to be tested before they are applied to the production system. There are a number of different tests that can be used to verify configurations.
+
+\begin{description}
+	
+	\item[Syntax Checking] \hfill \\ 
+	Identification of syntactical mistakes by simulating the interpreter. This is often provided as part of the editing experience inside an editor.
+	
+	\item[Unit Tests] \hfill \\
+	Testing of single functions and units of the configuration to ensure they are behaving as expected.
+	
+	\item[System / Integration Tests]  \hfill \\
+	Testing of multiple configuration components and functions in a simulated environment reflecting the live system.
+	
+	\item[Dry Runs] \hfill \\
+	Configuration Management tools provide facilities to simulate the application of a configuration but does not actually apply it. The simulation is often referred to as a \textit{Dry Run}.	
+	
+\end{description}
+
+
+\subsubsection{Monitoring \& Integrations}\hfill\\
+
+Essential for configuration management tools is the integration into the existing tool landscape. Integrations into 
+
+\begin{itemize}
+\item Version Control Systems
+\item Continous Integration Servers
+\item Cloud Platforms
+\item Monitoring Systems
+\item Access Control Systems
+\end{itemize}
+
+are either offered as part of the commercial offering of both tools respectively or contributed by the community.
+

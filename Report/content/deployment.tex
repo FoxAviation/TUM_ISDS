@@ -4,12 +4,22 @@
 \subsubsection{Architecture}\hfill\\
 Every configuration management tool requires an architecture which supports the management of a set of hosts. Chef and Puppet both implement a Master-Agent design where there exists a centralized control server and an agent program is installed on every managed device [Fig. \ref{fig:architecture}]. The centralized control server is responsible to keep a canonical state of configuration as provided by the operator in a repository and translates the configuration into profiles for every node.
 
-
 \begin{figure*}
 \includegraphics[height=2in]{assets/architecture}
 \caption{Architecture of a centralized configuration management tool \cite{delaet2010survey}}
 \label{fig:architecture}
 \end{figure*}
+
+\begin{table}[H]
+\begin{tabular}{lll}
+\toprule
+Component & Chef & Puppet \\
+\midrule
+Translation Agent  & Chef Server  & Puppet Master \\
+Deployment Agent & Chef Client & Puppet Agent \\
+\end{tabular}
+\end{table}
+
 
 \subsubsection{Distribution Mechanism}\hfill\\
 In order to distribute configurations from the centralized control server there are two mechanisms tools implement.
@@ -24,6 +34,10 @@ In order to distribute configurations from the centralized control server there 
 	
 \end{description}
 
-While Chef and Puppet both are pull-based systems both tools have implemented capabilities to manually trigger configuration distribution outside of the regular pull-schedule.
+While Chef and Puppet both are pull-based systems both tools have implemented capabilities to manually trigger configuration distribution outside of the regular pull-schedule. For Chef the \textit{Push Jobs} extension allows jobs to be run independently from a chef-client run. Puppet allows for similiar behaviour through external orchestration tools such as MCollective \cite{mcollective}.
 
 Pull-based systems have been shown to scale better to a larger number of managed devices.
+
+\subsubsection{Platform Support}\hfill\\
+
+Both Chef and Puppet support a number of different platforms for running their agent programs such as AIX, FreeBSD, Solaris, Linux, macOS and Windows. The control server needs to be run on a Linux-based system for both tools.
